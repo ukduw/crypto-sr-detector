@@ -15,3 +15,6 @@
 # detect sr levels
 # logic to determine closest ones to strategy parameters
 # return to use in parameter_writer
+
+
+# don't forget pip freeze > requirements.txt
