@@ -9,6 +9,10 @@
 
 # get up to date list later...
 # transition to binance business account(?) in future?
+    # direct access to exchange(s)
+    # long and short (alpaca no shorts...)
+        # future 24/7 version can have long and short logic; for now, long only
+    # complete coverage vs ~20+...
 
 # check above list of coins for ~50 - 200/300/500/1,000mil average volume?
 # alpaca - look into websocket, available data, etc...
