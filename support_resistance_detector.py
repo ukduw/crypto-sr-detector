@@ -45,7 +45,7 @@ universal = pytz.timezone("UTC")
 historical_client = CryptoHistoricalDataClient(api_key=API_KEY, secret_key=SECRET_KEY)
 
 
-async def level_detector():
+def level_detector():
     # iterate over coins, api request current day bar data
         # needs sleep to avoid api limit?
         # NOTE: bar timestamps are the START of the bar, e.g. 10:00 = 10:00-10:04:59
@@ -78,9 +78,11 @@ async def level_detector():
     # logic to determine ones closest to strategy parameters
     # logic to determine which levels to merge (e.g. within stdev of each other)
     # append those to levels, per coin
-    # add dollar_value key with dollar_position_size as value
-    # return levels for use in parameter_writer
-    return
+
+
+    levels.update({"dollar_value": dollar_position_size})
+
+    return levels
 
 
 
