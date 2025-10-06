@@ -44,7 +44,8 @@ universal = pytz.timezone("UTC")
 
 historical_client = CryptoHistoricalDataClient(api_key=API_KEY, secret_key=SECRET_KEY)
 
-def level_detector(): # ASYNC?
+
+async def level_detector():
     # iterate over coins, api request current day bar data
         # needs sleep to avoid api limit?
         # NOTE: bar timestamps are the START of the bar, e.g. 10:00 = 10:00-10:04:59
