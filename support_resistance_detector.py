@@ -1,3 +1,10 @@
+from alpaca.data.historical.crypto import CryptoHistoricalDataClient
+from alpaca.data.requests import CryptoBarsRequest
+from alpaca.data.timeframe import TimeFrame
+
+from dotenv import load_dotenv
+import os
+
 # Alpaca-supported crypto:
     # AAVE, AVAX, BAT, BCH, BTC, CRV, DOGE, DOT, ETH, GRT
     # LINK, LTC, MKR, PEPE, SHIB, SOL, SUSHI, TRUMP, UNI, USDC
@@ -7,6 +14,8 @@
     # --header 'Apca-Api-Key-Id: <KEY>' \
     # --header 'Apca-Api-Secret-Key: <SECRET>' \
 
+# subscribe as currency pair, e.g. "BTCUSD"
+
 # get up to date list later...
 # transition to binance business account(?) in future?
     # direct access to exchange(s)
@@ -15,17 +24,21 @@
     # complete coverage vs ~20+...
 
 # check above list of coins for ~50 - 200/300/500/1,000mil average volume?
-# alpaca - look into websocket, available data, etc...
 
 # don't forget pip freeze > requirements.txt
 
+load_dotenv()
+API_KEY = os.getenv("API_KEY")
+SECRET_KEY = os.getenv("SECRET_KEY")
 
 coins = [] # fill later
-dollar_position_size = 2000
+dollar_position_size = 2000 # placeholder
 
 bar_data = {}
 all_levels = {}
 levels = {}
+
+historical_client = CryptoHistoricalDataClient(api_key=API_KEY, secret_key=SECRET_KEY)
 
 def level_detector():
     # iterate over coins, api request current day bar data
