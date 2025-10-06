@@ -5,6 +5,8 @@ from alpaca.data.timeframe import TimeFrame
 from dotenv import load_dotenv
 import os
 
+import datetime, pytz
+
 # Alpaca-supported crypto:
     # AAVE, AVAX, BAT, BCH, BTC, CRV, DOGE, DOT, ETH, GRT
     # LINK, LTC, MKR, PEPE, SHIB, SOL, SUSHI, TRUMP, UNI, USDC
@@ -38,13 +40,42 @@ bar_data = {}
 all_levels = {}
 levels = {}
 
+universal = pytz.timezone("UTC")
+
 historical_client = CryptoHistoricalDataClient(api_key=API_KEY, secret_key=SECRET_KEY)
 
-def level_detector():
+def level_detector(): # ASYNC?
     # iterate over coins, api request current day bar data
+        # needs sleep to avoid api limit?
+        # NOTE: bar timestamps are the START of the bar, e.g. 10:00 = 10:00-10:04:59
+
+    lookback_bars = 282 # 23.5 hours of 5min bars
+    lookback_minutes = lookback_bars * 5 # 1,410 minutes
+    now = datetime.datetime.now(universal)
+    start_time = now - datetime.timedelta(minutes=lookback_minutes) # schedule for 23:30
+
+    for coin in coins:
+        request_params = CryptoBarsRequest(
+            symbol_or_symbols=coin,
+            timeframe=TimeFrame(5, TimeFrame.Minute),
+            start=start_time,
+            end=now,
+            feed="us"
+        )
+
+        # no need for df? consider just storing relevant data, e.g. highs/lows
+        bars = historical_client.get_crypto_bars(request_params).df
+        if isinstance(bars.index, pd.MultiIndex):
+            df = bars.xs(coin, level=0).sort_index()
+        else:
+            df = bars.sort_index()
+
+
     # store in bar_data
     # detect sr levels, append all_levels
+    # calculate stdev of highs/lows
     # logic to determine ones closest to strategy parameters
+    # logic to determine which levels to merge (e.g. within stdev of each other)
     # append those to levels, per coin
     # add dollar_value key with dollar_position_size as value
     # return levels for use in parameter_writer
