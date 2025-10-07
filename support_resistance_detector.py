@@ -5,7 +5,7 @@ from alpaca.data.timeframe import TimeFrame
 from dotenv import load_dotenv
 import os
 
-import datetime, pytz
+import datetime, pytz, statistics
 
 # Alpaca-supported crypto:
     # AAVE, AVAX, BAT, BCH, BTC, CRV, DOGE, DOT, ETH, GRT
@@ -73,9 +73,15 @@ def level_detector():
             lows[bar.symbol] = [bar.low] if bar.symbol not in lows else lows[bar.symbol].append(bar.low)
 
 
+    for coin in highs:
+        highs_stdev = statistics.stdev(highs[coin])
+        lows_stdev = statistics.stdev(lows[coin])
+
+        stdevs[coin] = [highs_stdev, lows_stdev]
+
+
 
     # detect sr levels, append all_levels
-    # calculate stdev of highs/lows
 
     # logic to determine ones closest to strategy parameters
     # logic to determine which levels to merge (e.g. within stdev of each other)
