@@ -97,7 +97,19 @@ def level_detector():
                 else:
                     all_levels[coin] = max(no_dupes) if coin not in all_levels else all_levels[coin].append(max(no_dupes))
         bar_window.clear()
-            
+    for coin in lows:
+        for low in coin:
+            bar_window.append(low * -1)
+            if len(bar_window) == 6:
+                no_dupes2 = [key for key, _ in groupby(bar_window)]
+                if len(no_dupes2) >= 3:
+                    peaks2, _ = find_peaks(no_dupes2)
+                    peaks2 = [-1 * x for x in peaks2]
+                    all_levels[coin].append(peaks2)
+                else:
+                    no_dupes2 = [-1 * x for x in no_dupes2]
+                    all_levels[coin].append(min(no_dupes2))
+        bar_window.clear()
     # detect sr levels, append all_levels
 
     # logic to determine which levels to merge (e.g. within stdev of each other)
