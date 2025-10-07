@@ -11,6 +11,8 @@ from collections import deque
 from itertools import groupby, chain
 from scipy.signal import find_peaks
 
+import matplotlib.pyplot as plt
+
 # Alpaca-supported crypto:
     # AAVE, AVAX, BAT, BCH, BTC, CRV, DOGE, DOT, ETH, GRT
     # LINK, LTC, MKR, PEPE, SHIB, SOL, SUSHI, TRUMP, UNI, USDC
@@ -113,6 +115,13 @@ def level_detector():
 
     for coin in all_levels:
         all_levels[coin] = list(chain.from_iterable(all_levels[coin]))
+
+
+    # REMOVE LATER
+    for coin in all_levels:
+        plt.plot(highs[coin], lows[coin])
+        plt.plot(all_levels[coin], "rx")
+        plt.show()
 
 
     # logic to determine which levels to merge (e.g. within stdev of each other)
