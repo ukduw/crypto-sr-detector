@@ -36,7 +36,9 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 coins = [] # fill later
 dollar_position_size = 2000 # placeholder
 
-bar_data = {}
+highs = {}
+lows = {}
+
 all_levels = {}
 levels = {}
 
@@ -64,17 +66,17 @@ def level_detector():
             feed="us"
         )
 
-        # no need for df? consider just storing relevant data, e.g. highs/lows
-        bars = historical_client.get_crypto_bars(request_params).df
-        if isinstance(bars.index, pd.MultiIndex):
-            df = bars.xs(coin, level=0).sort_index()
-        else:
-            df = bars.sort_index()
+        bars = historical_client.get_crypto_bars(request_params)
+        for bar in bars:
+            highs[bar.symbol] = bar.high if bar.symbol not in highs else highs[bar.symbol].append(bar.high)
+            lows[bar.symbol] = bar.low if bar.symbol not in lows else lows[bar.symbol].append(bar.low)
 
 
-    # store in bar_data
+
+
     # detect sr levels, append all_levels
     # calculate stdev of highs/lows
+
     # logic to determine ones closest to strategy parameters
     # logic to determine which levels to merge (e.g. within stdev of each other)
     # append those to levels, per coin
