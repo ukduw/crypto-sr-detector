@@ -7,6 +7,9 @@ import os
 
 import datetime, pytz, statistics
 
+from scipy.signal import find_peaks
+from collections import deque
+
 # Alpaca-supported crypto:
     # AAVE, AVAX, BAT, BCH, BTC, CRV, DOGE, DOT, ETH, GRT
     # LINK, LTC, MKR, PEPE, SHIB, SOL, SUSHI, TRUMP, UNI, USDC
@@ -50,6 +53,8 @@ historical_client = CryptoHistoricalDataClient(api_key=API_KEY, secret_key=SECRE
 
 
 def level_detector():
+    bar_window = deque(maxlen=6) # 30min
+
     # needs sleep to avoid api limit?
     # NOTE: bar timestamps are the START of the bar, e.g. 10:00 = 10:00-10:04:59
 
@@ -83,8 +88,8 @@ def level_detector():
 
     # detect sr levels, append all_levels
 
-    # logic to determine ones closest to strategy parameters
     # logic to determine which levels to merge (e.g. within stdev of each other)
+    # logic to determine ones closest to strategy parameters
     # append those to levels, per coin
 
 
