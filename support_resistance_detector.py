@@ -39,6 +39,8 @@ dollar_position_size = 2000 # placeholder
 highs = {}
 lows = {}
 
+stdevs = {}
+
 all_levels = {}
 levels = {}
 
@@ -67,9 +69,8 @@ def level_detector():
 
         bars = historical_client.get_crypto_bars(request_params)
         for bar in bars:
-            highs[bar.symbol] = bar.high if bar.symbol not in highs else highs[bar.symbol].append(bar.high)
-            lows[bar.symbol] = bar.low if bar.symbol not in lows else lows[bar.symbol].append(bar.low)
-
+            highs[bar.symbol] = [bar.high] if bar.symbol not in highs else highs[bar.symbol].append(bar.high)
+            lows[bar.symbol] = [bar.low] if bar.symbol not in lows else lows[bar.symbol].append(bar.low)
 
 
 
