@@ -8,7 +8,7 @@ import os
 import datetime, pytz, statistics
 
 from collections import deque
-from itertools import groupby
+from itertools import groupby, chain
 from scipy.signal import find_peaks
 
 # Alpaca-supported crypto:
@@ -110,7 +110,10 @@ def level_detector():
                     no_dupes2 = [-1 * x for x in no_dupes2]
                     all_levels[coin].append(min(no_dupes2))
         bar_window.clear()
-    # detect sr levels, append all_levels
+
+    for coin in all_levels:
+        all_levels[coin] = list(chain.from_iterable(all_levels[coin]))
+
 
     # logic to determine which levels to merge (e.g. within stdev of each other)
     # logic to determine ones closest to strategy parameters
