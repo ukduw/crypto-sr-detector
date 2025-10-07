@@ -7,8 +7,9 @@ import os
 
 import datetime, pytz, statistics
 
-from scipy.signal import find_peaks
 from collections import deque
+from itertools import groupby
+from scipy.signal import find_peaks
 
 # Alpaca-supported crypto:
     # AAVE, AVAX, BAT, BCH, BTC, CRV, DOGE, DOT, ETH, GRT
@@ -85,7 +86,16 @@ def level_detector():
         stdevs[coin] = [highs_stdev, lows_stdev]
 
 
-
+    for coin in highs:
+        for high in coin:
+            bar_window.append(high)
+            if len(bar_window) == 6:
+                no_dupes = [key for key, _ in groupby(bar_window)]
+                if len(no_dupes) >= 3:
+                    peaks, _ = find_peaks(no_dupes)
+                    all_levels[coin] = peaks if coin not in all_levels else all_levels[coin].append(peaks)
+                else:
+                    all_levels[coin] = max(no_dupes) if coin not in all_levels else all_levels[coin].append(max(no_dupes))
     # detect sr levels, append all_levels
 
     # logic to determine which levels to merge (e.g. within stdev of each other)
