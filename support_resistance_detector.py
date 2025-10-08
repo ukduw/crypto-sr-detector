@@ -142,6 +142,34 @@ def level_detector():
 
     # === STRATEGY PARAMETERS === #
         # TWEAK THIS - needs more research...
+    smallest_diff1 = 100
+    smallest_diff2 = 100
+
+    closest_highs = [] # in case of multiple; tie-breaker
+    closest_lows = []
+
+    for coin in all_levels:
+        for level in all_levels[coin]:
+            diff1 = abs(level - close[coin] * 1.05) # 5%, TWEAK, needs research
+            
+            if diff1 < smallest_diff1:
+                closest_highs = [level]
+                smallest_diff1 = diff1
+            elif diff1 == smallest_diff1:
+                closest_highs.append(level)
+        entry = max(closest_highs)
+
+        for level in all_levels[coin]:
+            diff2 = abs(level - entry * 0.95) # 5% from entry, TWEAK
+
+            if diff2 < smallest_diff2:
+                closest_lows = [level]
+                smallest_diff2 = diff2
+            elif diff2 == smallest_diff2:
+                closest_lows.append(level)
+        stop = min(closest_lows)
+
+        
     
 
 
