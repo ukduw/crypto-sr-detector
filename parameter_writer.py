@@ -6,7 +6,7 @@ CONFIG_FILE = "configs.json" # placeholder - change to the config json in crypto
 
 # dict:
     #{
-        #{"COIN1": [100.0, 95.0], "COIN2": [234.0, 223.0], ...},
+        #"parameters": {"COIN1": [100.0, 95.0], "COIN2": [234.0, 223.0], ...},
         #"dollar_value": 2000.0
     #}
 
