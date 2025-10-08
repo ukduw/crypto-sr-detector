@@ -142,6 +142,8 @@ def level_detector():
 
     # === STRATEGY PARAMETERS === #
         # TWEAK THIS - needs more research...
+    parameters = {}
+
     smallest_diff1 = 100
     smallest_diff2 = 100
 
@@ -169,12 +171,10 @@ def level_detector():
                 closest_lows.append(level)
         stop = min(closest_lows)
 
-        
+        parameters[coin] = [entry, stop]
     
 
-
-    # append those to levels, per coin
-
+    levels.update
 
     levels.update({"dollar_value": dollar_position_size})
 
@@ -184,6 +184,6 @@ def level_detector():
 
 # output format:
     #{
-        #{"COIN1": [100.0, 95.0], "COIN2": [234.0, 223.0], ...},
+        #"parameters": {"COIN1": [100.0, 95.0], "COIN2": [234.0, 223.0], ...},
         #"dollar_value": 2000.0
     #}
