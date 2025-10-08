@@ -130,21 +130,11 @@ def level_detector():
         all_levels[coin] = all_levels[coin] + support
 
 
-
-
     # REMOVE LATER
     for coin in all_levels:
         plt.plot(highs[coin], lows[coin])
         plt.plot(all_levels[coin], "rx")
         plt.show()
-
-
-    # logic to determine which levels to merge (e.g. within stdev of each other)
-        # tweak
-    for coin in all_levels:
-        for i in range(len(coin) -1):
-            if  <= coin[i] 
-
 
 
     # logic to determine ones closest to strategy parameters
