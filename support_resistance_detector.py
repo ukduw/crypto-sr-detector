@@ -115,6 +115,7 @@ def level_detector():
 
     for coin in all_levels:
         all_levels[coin] = list(chain.from_iterable(all_levels[coin]))
+        
 
 
     # REMOVE LATER
@@ -125,7 +126,16 @@ def level_detector():
 
 
     # logic to determine which levels to merge (e.g. within stdev of each other)
+        # tweak
+    for coin in all_levels:
+        for i in range(len(coin) -1):
+            if  <= coin[i] 
+
+
+
     # logic to determine ones closest to strategy parameters
+        # needs more research first...
+
     # append those to levels, per coin
 
 
