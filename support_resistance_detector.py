@@ -44,6 +44,7 @@ dollar_position_size = 2000 # placeholder
 
 highs = {}
 lows = {}
+close = {}
 
 stdevs = {}
 
@@ -80,6 +81,7 @@ def level_detector():
         for bar in bars:
             highs[bar.symbol] = [bar.high] if bar.symbol not in highs else highs[bar.symbol].append(bar.high)
             lows[bar.symbol] = [bar.low] if bar.symbol not in lows else lows[bar.symbol].append(bar.low)
+        close[coin] = bars[-1].close
 
     # === STDEV === #
     for coin in highs:
