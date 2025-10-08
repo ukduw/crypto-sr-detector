@@ -101,6 +101,7 @@ def level_detector():
                 else:
                     resistance.append(max(no_dupes))
         bar_window.clear()
+        resistance = list(chain.from_iterable(resistance))
         for i in range(len(resistance)):
             for j in range(len(resistance)):
                 if (resistance[i] - stdevs[coin][0]) <= resistance[j] < resistance[i]:
@@ -121,14 +122,13 @@ def level_detector():
                     no_dupes2 = [-1 * x for x in no_dupes2]
                     support.append(min(no_dupes2))
         bar_window.clear()
+        support = list(chain.from_iterable(support))
         for i in range(len(support)):
             for j in range(len(support)):
                 if (support[i] + stdevs[coin][1]) >= support[j] > support[i]:
                     support.pop[j]
         all_levels[coin] = all_levels[coin] + support
 
-    for coin in all_levels:
-        all_levels[coin] = list(chain.from_iterable(all_levels[coin]))
 
 
 
