@@ -66,6 +66,7 @@ def level_detector():
     now = datetime.datetime.now(universal)
     start_time = now - datetime.timedelta(minutes=lookback_minutes) # schedule for 23:30
 
+    # === API REQUESTS === #
     for coin in coins:
         request_params = CryptoBarsRequest(
             symbol_or_symbols=coin,
@@ -80,14 +81,14 @@ def level_detector():
             highs[bar.symbol] = [bar.high] if bar.symbol not in highs else highs[bar.symbol].append(bar.high)
             lows[bar.symbol] = [bar.low] if bar.symbol not in lows else lows[bar.symbol].append(bar.low)
 
-
+    # === STDEV === #
     for coin in highs:
         highs_stdev = statistics.stdev(highs[coin])
         lows_stdev = statistics.stdev(lows[coin])
 
         stdevs[coin] = [highs_stdev, lows_stdev]
 
-
+    # === S/R DETECT, MERGE LEVELS === #
     for coin in highs:
         resistance = []
         for high in highs[coin]:
@@ -130,15 +131,17 @@ def level_detector():
         all_levels[coin] = all_levels[coin] + support
 
 
-    # REMOVE LATER
+    # PLOT - REMOVE LATER
     for coin in all_levels:
         plt.plot(highs[coin], lows[coin])
         plt.plot(all_levels[coin], "rx")
         plt.show()
 
 
-    # logic to determine ones closest to strategy parameters
-        # needs more research first...
+    # === STRATEGY PARAMETERS === #
+        # TWEAK THIS - needs more research...
+    
+
 
     # append those to levels, per coin
 
