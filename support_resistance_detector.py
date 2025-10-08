@@ -83,12 +83,18 @@ def level_detector():
             lows[bar.symbol] = [bar.low] if bar.symbol not in lows else lows[bar.symbol].append(bar.low)
         close[coin] = bars[-1].close
 
+    print("HIGHS", highs)
+    print("LOWS", lows)
+    print("CLOSE", close)
+
     # === STDEV === #
     for coin in highs:
         highs_stdev = statistics.stdev(highs[coin])
         lows_stdev = statistics.stdev(lows[coin])
 
         stdevs[coin] = [highs_stdev, lows_stdev]
+
+    print("STDEV", stdevs)
 
     # === S/R DETECT, MERGE LEVELS === #
     for coin in highs:
@@ -173,9 +179,12 @@ def level_detector():
 
         parameters[coin] = [entry, stop]
     
+    print("PARAMETERS", parameters)
 
     levels["parameters"] = parameters
     levels["dollar_value"] = dollar_position_size
+
+    print("LEVELS", levels)
 
     return levels
 
