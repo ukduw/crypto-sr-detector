@@ -89,17 +89,25 @@ def level_detector():
 
 
     for coin in highs:
+        resistance = []
         for high in highs[coin]:
             bar_window.append(high)
             if len(bar_window) == 6:
                 no_dupes = [key for key, _ in groupby(bar_window)]
                 if len(no_dupes) >= 3:
                     peaks, _ = find_peaks(no_dupes)
-                    all_levels[coin] = peaks if coin not in all_levels else all_levels[coin].append(peaks)
+                    peaks = [key for key, _ in groupby(peaks)]
+                    resistance.append(peaks)
                 else:
-                    all_levels[coin] = max(no_dupes) if coin not in all_levels else all_levels[coin].append(max(no_dupes))
+                    resistance.append(max(no_dupes))
         bar_window.clear()
+        for i in range(len(resistance)):
+            for j in range(i+1, len(resistance)):
+                if resistance[j] <= resistance[i] - stdevs[coin][0]:
+                    resistance.pop(j)
+        all_levels[coin] = resistance
     for coin in lows:
+        support = []
         for low in lows[coin]:
             bar_window.append(low * -1)
             if len(bar_window) == 6:
