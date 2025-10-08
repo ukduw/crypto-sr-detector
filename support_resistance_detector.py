@@ -42,21 +42,21 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 coins = [] # fill later
 dollar_position_size = 2000 # placeholder
 
-highs = {}
-lows = {}
-close = {}
-
-stdevs = {}
-
-all_levels = {}
-levels = {}
-
 universal = pytz.timezone("UTC")
 
 historical_client = CryptoHistoricalDataClient(api_key=API_KEY, secret_key=SECRET_KEY)
 
 
 def level_detector():
+    highs = {}
+    lows = {}
+    close = {}
+
+    stdevs = {}
+
+    all_levels = {}
+    levels = {}
+
     bar_window = deque(maxlen=6) # 30min
 
     # needs sleep to avoid api limit?
