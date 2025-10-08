@@ -89,7 +89,7 @@ def level_detector():
 
 
     for coin in highs:
-        for high in coin:
+        for high in highs[coin]:
             bar_window.append(high)
             if len(bar_window) == 6:
                 no_dupes = [key for key, _ in groupby(bar_window)]
@@ -100,7 +100,7 @@ def level_detector():
                     all_levels[coin] = max(no_dupes) if coin not in all_levels else all_levels[coin].append(max(no_dupes))
         bar_window.clear()
     for coin in lows:
-        for low in coin:
+        for low in lows[coin]:
             bar_window.append(low * -1)
             if len(bar_window) == 6:
                 no_dupes2 = [key for key, _ in groupby(bar_window)]
@@ -115,7 +115,7 @@ def level_detector():
 
     for coin in all_levels:
         all_levels[coin] = list(chain.from_iterable(all_levels[coin]))
-        
+
 
 
     # REMOVE LATER
