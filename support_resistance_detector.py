@@ -102,8 +102,8 @@ def level_detector():
                     resistance.append(max(no_dupes))
         bar_window.clear()
         for i in range(len(resistance)):
-            for j in range(i+1, len(resistance)):
-                if resistance[j] <= resistance[i] - stdevs[coin][0]:
+            for j in range(len(resistance)):
+                if (resistance[i] - stdevs[coin][0]) <= resistance[j] < resistance[i]:
                     resistance.pop(j)
         all_levels[coin] = resistance
     for coin in lows:
