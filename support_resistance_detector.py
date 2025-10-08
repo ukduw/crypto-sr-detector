@@ -174,9 +174,8 @@ def level_detector():
         parameters[coin] = [entry, stop]
     
 
-    levels.update
-
-    levels.update({"dollar_value": dollar_position_size})
+    levels["parameters"] = parameters
+    levels["dollar_value"] = dollar_position_size
 
     return levels
 
