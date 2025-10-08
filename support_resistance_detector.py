@@ -115,11 +115,17 @@ def level_detector():
                 if len(no_dupes2) >= 3:
                     peaks2, _ = find_peaks(no_dupes2)
                     peaks2 = [-1 * x for x in peaks2]
-                    all_levels[coin].append(peaks2)
+                    peaks2 = [key for key, _ in groupby(peaks2)]
+                    support.append(peaks2)
                 else:
                     no_dupes2 = [-1 * x for x in no_dupes2]
-                    all_levels[coin].append(min(no_dupes2))
+                    support.append(min(no_dupes2))
         bar_window.clear()
+        for i in range(len(support)):
+            for j in range(len(support)):
+                if (support[i] + stdevs[coin][1]) >= support[j] > support[i]:
+                    support.pop[j]
+        all_levels[coin] = all_levels[coin] + support
 
     for coin in all_levels:
         all_levels[coin] = list(chain.from_iterable(all_levels[coin]))
