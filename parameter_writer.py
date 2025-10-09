@@ -1,7 +1,7 @@
 import json
 
 CONFIG_FILE = "configs.json" # placeholder - change to the config json in crypto bot after testing
-    # ../crypto-hybrid-tradebot/configs.json
+    # ../crypto-hybrid-tradebot/crypto_config.json
     # test, tweak support_resistance_detector parameters, write readme
 
 # dict:
