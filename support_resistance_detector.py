@@ -31,8 +31,12 @@ import matplotlib.pyplot as plt
         # future 24/7 version can have long and short logic; for now, long only
     # complete coverage vs ~20+...
 
-# check above list of coins for ~50 - 200/300/500/1,000mil average volume?
 
+# check available coin list for ~50-200/300/500/1,000mil average volume(?)
+# determine level parameters
+# test, tweak parameters, remove prints/plots/comments
+
+# write readme
 # don't forget pip freeze > requirements.txt
 
 load_dotenv()
