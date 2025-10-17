@@ -32,6 +32,7 @@ import matplotlib.pyplot as plt
     # complete coverage vs ~20+...
 
 
+# full list: [AAVE, AVAX, BAT, BCH, BTC, CRV, DOGE, DOT, ETH, GRT, LINK, LTC, MKR, PEPE, SHIB, SOL, SUSHI, TRUMP, UNI, USDC, USDG, USDT, XRP, XTZ, YFI]
 # check available coin list for ~50-200/300/500/1,000mil average volume(?)
     # consider volume/market cap condition
 # determine level parameters (and take-profit conditions for bot script)
