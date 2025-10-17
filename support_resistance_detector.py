@@ -32,7 +32,11 @@ import matplotlib.pyplot as plt
     # complete coverage vs ~20+...
 
 
-# full list: [AAVE, AVAX, BAT, BCH, BTC, CRV, DOGE, DOT, ETH, GRT, LINK, LTC, MKR, PEPE, SHIB, SOL, SUSHI, TRUMP, UNI, USDC, USDG, USDT, XRP, XTZ, YFI]
+# full list: 22 [AAVE, AVAX, BAT, BCH, BTC, CRV, DOGE, DOT, ETH, GRT, LINK, LTC, MKR, PEPE, SHIB, SOL, SUSHI, TRUMP, UNI, USDC, USDG, USDT, XRP, XTZ, YFI]
+# cap >= 200mil, vol/cap 0.02-0.20, vol 50-200mil: 45 coins
+# cap >= 200mil, vol/cap 0.02-0.20, vol 200-500mil: 17 coins
+# cap >= 200mil, vol/cap 0.02-0.20, vol 500-1,000mil: 6 coins
+
 # check available coin list for 50-200, 200-500, 500-1,000mil usd volume
     # test these bands; determine "sweet spot" if possible (e.g. 100-500mil, or narrower)
 # consider volume/market cap condition
