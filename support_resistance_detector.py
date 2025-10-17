@@ -30,6 +30,11 @@ import matplotlib.pyplot as plt
     # long and short (alpaca no shorts...)
         # future 24/7 version can have long and short logic; for now, long only
     # complete coverage vs ~20+...
+# NOTE: alpaca trades coin-fiat pairs; binance trades coin-coin pairs
+    # e.g. use stablecoins like USDT (tether - most popular), USDC, FDUSD
+# in future, list of coins may be dynamically assigned
+    # e.g. coingecko api gives market_cap, total_volume, volume/market_cap
+    # list can be assigned daily/weekly based on stats
 
 
 # full list: 22 [AAVE, AVAX, BAT, BCH, BTC, CRV, DOGE, DOT, ETH, GRT, LINK, LTC, MKR, PEPE, SHIB, SOL, SUSHI, TRUMP, UNI, USDC, USDG, USDT, XRP, XTZ, YFI]
@@ -45,9 +50,9 @@ import matplotlib.pyplot as plt
 # consider market cap condition
     # >200mil usd?
     # >500mil usd?
+
+
 # determine level parameters (and take-profit conditions for bot script)
-
-
 # test, tweak parameters, remove prints/plots/comments
 # write readme
 
