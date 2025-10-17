@@ -21,10 +21,10 @@ import matplotlib.pyplot as plt
     # curl --request GET 'https://api.alpaca.markets/v2/assets?asset_class=crypto' \
     # --header 'Apca-Api-Key-Id: <KEY>' \
     # --header 'Apca-Api-Secret-Key: <SECRET>' \
+# get up to date list later...
 
 # subscribe as currency pair, e.g. "BTCUSD"
 
-# get up to date list later...
 # transition to binance business account(?) in future?
     # direct access to exchange(s)
     # long and short (alpaca no shorts...)
