@@ -38,6 +38,9 @@ import matplotlib.pyplot as plt
 # consider volume/market cap condition
     # 0.02 - 0.10 (2-10%) ideal?
     # >0.10 - 0.20 (>10-20%) too high?
+# consider market cap condition
+    # >200mil usd?
+    # >500mil usd?
 # determine level parameters (and take-profit conditions for bot script)
 
 
