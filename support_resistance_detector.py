@@ -36,7 +36,8 @@ import matplotlib.pyplot as plt
 # check available coin list for 50-200, 200-500, 500-1,000mil usd volume
     # test these bands; determine "sweet spot" if possible (e.g. 100-500mil, or narrower)
 # consider volume/market cap condition
-    # 
+    # 0.02 - 0.10 (2-10%) ideal?
+    # >0.10 - 0.20 (>10-20%) too high?
 # determine level parameters (and take-profit conditions for bot script)
 
 
