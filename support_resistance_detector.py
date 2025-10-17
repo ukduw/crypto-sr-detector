@@ -39,7 +39,7 @@ import matplotlib.pyplot as plt
 # test, tweak parameters, remove prints/plots/comments
 
 # write readme
-# don't forget pip freeze > requirements.txt
+
 
 load_dotenv()
 API_KEY = os.getenv("API_KEY")
