@@ -37,8 +37,8 @@ import matplotlib.pyplot as plt
     # consider volume/market cap condition
 # determine level parameters (and take-profit conditions for bot script)
 
-# test, tweak parameters, remove prints/plots/comments
 
+# test, tweak parameters, remove prints/plots/comments
 # write readme
 
 
