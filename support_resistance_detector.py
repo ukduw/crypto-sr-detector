@@ -33,7 +33,9 @@ import matplotlib.pyplot as plt
 
 
 # check available coin list for ~50-200/300/500/1,000mil average volume(?)
-# determine level parameters
+    # consider volume/market cap condition
+# determine level parameters (and take-profit conditions for bot script)
+
 # test, tweak parameters, remove prints/plots/comments
 
 # write readme
@@ -44,7 +46,7 @@ API_KEY = os.getenv("API_KEY")
 SECRET_KEY = os.getenv("SECRET_KEY")
 
 coins = [] # fill later
-dollar_position_size = 2000 # placeholder
+dollar_position_size = 1000 # placeholder
 
 universal = pytz.timezone("UTC")
 
