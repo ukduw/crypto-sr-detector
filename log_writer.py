@@ -1,5 +1,8 @@
 import datetime, pytz
 
+universal = pytz.timezone("UTC")
+now = datetime.datetime.now(universal)
+
 
 # dict:
     #{
