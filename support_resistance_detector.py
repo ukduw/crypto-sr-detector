@@ -17,6 +17,7 @@ import matplotlib.pyplot as plt
     # AAVE, AVAX, BAT, BCH, BTC, CRV, DOGE, DOT, ETH, GRT
     # LINK, LTC, MKR, PEPE, SHIB, SOL, SUSHI, TRUMP, UNI, USDC
     # USDG, USDT, XRP, XTZ, YFI
+        # (unavailable at coin-level: GRT, SUSHI, TRUMP, USDG, XTZ, YFI)
 # API call for available crypto in case of update:
     # curl --request GET 'https://api.alpaca.markets/v2/assets?asset_class=crypto' \
     # --header 'Apca-Api-Key-Id: <KEY>' \
