@@ -47,7 +47,7 @@ load_dotenv()
 API_KEY = os.getenv("API_KEY")
 SECRET_KEY = os.getenv("SECRET_KEY")
 
-coins = [] # fill later
+coins = [] # update, short list of ~4 is fine for now
 dollar_position_size = 1000 # placeholder
 
 universal = pytz.timezone("UTC")
