@@ -14,6 +14,8 @@ from scipy.signal import find_peaks
 import matplotlib.pyplot as plt
 
 
+# subscribe as currency pair, e.g. "BTCUSD"
+
 # full list: 22 [AAVE, AVAX, BAT, BCH, BTC, CRV, DOGE, DOT, ETH, GRT, LINK, LTC, MKR, PEPE, SHIB, SOL, SUSHI, TRUMP, UNI, USDC, USDG, USDT, XRP, XTZ, YFI]
 # cap >= 200mil, vol/cap 0.02-0.20, vol 50-200mil: 45 coins
 # cap >= 200mil, vol/cap 0.02-0.20, vol 200-500mil: 17 coins
