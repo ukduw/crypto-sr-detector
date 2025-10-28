@@ -9,7 +9,6 @@
     # --header 'Apca-Api-Secret-Key: <SECRET>' \
 # get up to date list later...
 
-# subscribe as currency pair, e.g. "BTCUSD"
 
 # transition to binance business account(?) in future?
     # direct access to exchange(s)
