@@ -48,7 +48,6 @@ API_KEY = os.getenv("API_KEY")
 SECRET_KEY = os.getenv("SECRET_KEY")
 
 coins = [] # update, short list of ~4 is fine for now
-    # populate and add run statement at bottom for sr testing...
 dollar_position_size = 1000 # placeholder
 
 universal = pytz.timezone("UTC")
@@ -204,3 +203,8 @@ def level_detector():
         #"parameters": {"COIN1": [100.0, 95.0], "COIN2": [234.0, 223.0], ...},
         #"dollar_value": 2000.0
     #}
+
+
+if __name__ == "main":
+    level_detector()
+
