@@ -48,7 +48,7 @@ API_KEY = os.getenv("API_KEY")
 SECRET_KEY = os.getenv("SECRET_KEY")
 
 coins = [] # update, short list of ~4 is fine for now
-dollar_position_size = 1000 # placeholder
+dollar_position_size = 1000 # placeholder, depends on length of coin list
 
 universal = pytz.timezone("UTC")
 
