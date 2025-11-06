@@ -67,7 +67,6 @@ def level_detector():
 
     bar_window = deque(maxlen=6) # 30min
 
-    # needs sleep to avoid api limit?
     # NOTE: bar timestamps are the START of the bar, e.g. 10:00 = 10:00-10:04:59
 
     lookback_bars = 282 # 23.5 hours of 5min bars
