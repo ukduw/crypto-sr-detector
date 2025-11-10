@@ -21,3 +21,10 @@ UNAVAILABLE: MKR
 # consider market cap condition
     # >200mil usd?
     # >500mil usd?
+
+
+# cross-check with currency pair:
+# 30d average volume
+    # 50-200, 200-500, 500-1,000mil usd
+# daily range/ATR?
+# spread?
