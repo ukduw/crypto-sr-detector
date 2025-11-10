@@ -8,6 +8,10 @@ AVAILABLE (2)
 (30d avg vol, market cap, avg vol/cap ratio)
 AAVE - 402.62M, 3.36B, 0.12
 AVAX - 664.26M, 7.65B, 0.09
+BCH - 505.36M, 10.13B, 0.05
+BTC - 76.75B, 2.11T, 0.04
+CRV - 202.24M, 689.05M, 0.29
+DOGE - 2.76B, 27.45B, 0.10
 
 
 
