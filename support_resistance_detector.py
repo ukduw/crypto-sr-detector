@@ -21,21 +21,6 @@ import matplotlib.pyplot as plt
 # cap >= 200mil, vol/cap 0.02-0.20, vol 200-500mil: 17 coins
 # cap >= 200mil, vol/cap 0.02-0.20, vol 500-1,000mil: 6 coins
 
-# coin level:
-# check available coin list for 50-200, 200-500, 500-1,000mil usd volume
-    # test these bands; determine "sweet spot" if possible (e.g. 100-500mil, or narrower)
-# consider volume/market cap condition
-    # 0.02 - 0.10 (2-10%) ideal?
-    # >0.10 - 0.20 (>10-20%) too high?
-# consider market cap condition
-    # >200mil usd?
-    # >500mil usd?
-
-# cross-check with currency pair:
-# 30d average volume
-    # 50-200, 200-500, 500-1,000mil usd
-# daily range/ATR?
-# spread?
 
 
 # determine level parameters (and take-profit conditions for bot script)
