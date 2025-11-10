@@ -1,9 +1,11 @@
 full list (22): [AAVE, AVAX, BAT, BCH, BTC, CRV, DOGE, DOT, ETH, GRT, LINK, LTC, MKR, PEPE, SHIB, SOL, SUSHI, TRUMP, UNI, USDC, USDG, USDT, XRP, XTZ, YFI]
 
+
 UNAVAILABLE (1): MKR
 
 
-
+(30d avg vol, market cap, avg vol/cap ratio)
+AAVE - 402.62M, 3.36B, 0.12
 
 
 
@@ -16,12 +18,12 @@ UNAVAILABLE (1): MKR
 # coin-level conditions:
 # check available coin list for 50-200, 200-500, 500-1,000mil usd volume
     # test these bands; determine "sweet spot" if possible (e.g. 100-500mil, or narrower)
-# consider volume/market cap condition
-    # 0.02 - 0.10 (2-10%) ideal?
-    # >0.10 - 0.20 (>10-20%) too high?
 # consider market cap condition
     # >200mil usd?
     # >500mil usd?
+# consider volume/market cap condition
+    # 0.02 - 0.10 (2-10%) ideal?
+    # >0.10 - 0.20 (>10-20%) too high?
 
 
 # cross-check with currency pair:
