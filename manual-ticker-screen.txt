@@ -5,7 +5,7 @@ UNAVAILABLE / N/A (2): MKR, BAT
     NOTE: MKR rebranded to SKY - leave here for now...
 
 
-AVAILABLE (19)
+AVAILABLE (20)
 (30d avg vol, market cap, avg vol/cap ratio)
 AAVE - 402.62M, 3.36B, 0.12
 AVAX - 664.26M, 7.65B, 0.09
