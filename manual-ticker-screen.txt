@@ -4,7 +4,7 @@ full list (22): [AAVE, AVAX, BAT, BCH, BTC, CRV, DOGE, DOT, ETH, GRT, LINK, LTC,
 UNAVAILABLE / N/A (2): MKR, BAT
 
 
-AVAILABLE (2)
+AVAILABLE (6)
 (30d avg vol, market cap, avg vol/cap ratio)
 AAVE - 402.62M, 3.36B, 0.12
 AVAX - 664.26M, 7.65B, 0.09
@@ -12,10 +12,18 @@ BCH - 505.36M, 10.13B, 0.05
 BTC - 76.75B, 2.11T, 0.04
 CRV - 202.24M, 689.05M, 0.29
 DOGE - 2.76B, 27.45B, 0.10
-
-
-
-
+DOT - 
+ETH - 
+LINK - 
+LTC - 
+PEPE - 
+SHIB - 
+SOL - 
+UNI - 
+USDC - 
+USDT - 
+XRP - 
+YFI - 
 
 
 
