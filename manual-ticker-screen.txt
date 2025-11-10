@@ -13,6 +13,7 @@ UNAVAILABLE: MKR
 
 
 
+# coin-level conditions:
 # check available coin list for 50-200, 200-500, 500-1,000mil usd volume
     # test these bands; determine "sweet spot" if possible (e.g. 100-500mil, or narrower)
 # consider volume/market cap condition
