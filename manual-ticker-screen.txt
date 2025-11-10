@@ -2,6 +2,7 @@ full list (22): [AAVE, AVAX, BAT, BCH, BTC, CRV, DOGE, DOT, ETH, GRT, LINK, LTC,
 
 
 UNAVAILABLE / N/A (2): MKR, BAT
+    NOTE: MKR rebranded to SKY - leave here for now...
 
 
 AVAILABLE (6)
@@ -23,6 +24,7 @@ UNI -
 USDC - 
 USDT - 
 XRP - 
+XTZ* - 24.49M, 685.08M, 0.04
 YFI - 
 
 
