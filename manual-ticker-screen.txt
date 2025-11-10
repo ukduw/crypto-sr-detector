@@ -1,13 +1,12 @@
 full list (22): [AAVE, AVAX, BAT, BCH, BTC, CRV, DOGE, DOT, ETH, GRT, LINK, LTC, MKR, PEPE, SHIB, SOL, SUSHI, TRUMP, UNI, USDC, USDG, USDT, XRP, XTZ, YFI]
 
 
-UNAVAILABLE (1): MKR
+UNAVAILABLE / N/A (2): MKR, BAT
 
 
 (30d avg vol, market cap, avg vol/cap ratio)
 AAVE - 402.62M, 3.36B, 0.12
-
-
+AVAX - 664.26M, 7.65B, 0.09
 
 
 
