@@ -38,7 +38,7 @@ CRV -
 DOGE - 
 DOT - 
 ETH - 
-GRT* - 
+GRT - 
 LINK - 
 LTC - 
 PEPE - 
@@ -48,8 +48,10 @@ UNI -
 USDC - 
 USDT - 
 XRP - 
-XTZ* - 
+XTZ - 
 YFI - 
+    # These are all 24h volumes
+    # Less reliable, but 30d avg data is very unreliable and already looked everywhere...
 
 
 TODO: 
