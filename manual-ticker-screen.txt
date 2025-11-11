@@ -30,16 +30,16 @@ YFI - 18.25M, 168.74M, 0.11
 
 
 coinUSD 30d avg vol
-AAVE - 
-AVAX - 
-BCH - 
-BTC - 
-CRV - 
-DOGE - 
-DOT - 
-ETH - 
-GRT - 
-LINK - 
+AAVE - 41.48k
+AVAX - 730.10k
+BCH - 11.36k
+BTC - 7.62k
+CRV - 11.42M
+DOGE - 262.15M
+DOT - 3.02M
+ETH - 131.20k
+GRT - 15.01M
+LINK - 2.17M
 LTC - 
 PEPE - 
 SHIB - 
@@ -87,4 +87,3 @@ vol/cap ratio (<=0.10, >0.10)
     500-1,000mil
 
 untradeable
-    
