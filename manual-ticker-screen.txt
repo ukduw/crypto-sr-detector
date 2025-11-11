@@ -78,12 +78,16 @@ vol/cap ratio (<=0.10, >0.10)
 
 # cross-check with coin-usd currency pair:
 30d average volume
-    50-200mil
+    <1mil
     
     
-    200-500mil
+    <10mil
+
+
+    <100mil
     
     
-    500-1,000mil
+    >100mil
+    
 
 untradeable
