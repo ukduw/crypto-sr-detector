@@ -48,9 +48,9 @@ TODO:
     low / mid / high
     CRV, GRT, XTZ, YFI / AAVE, AVAX, DOT, LTC, PEPE, SHIB, UNI / BCH, BTC, DOGE, ETH, LINK, SOL, USDC, USDT, XRP
 
-# consider volume/market cap condition
-    # 0.02 - 0.10 (2-10%) ideal?
-    # >0.10 - 0.20 (>10-20%) too high?
+    vol/cap ratio (<=0.10, >0.10)
+    low / high
+    AVAX, BCH, BTC, DOGE, DOT, ETH, GRT, LINK, SHIB, SOL, UNI, XRP, XTZ / AAVE, CRV, LTC, PEPE, USDC, USDT, YFI
 
 
 
