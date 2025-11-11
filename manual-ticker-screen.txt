@@ -50,8 +50,6 @@ USDT -
 XRP - 
 XTZ - 
 YFI - 
-    # These are all 24h volumes
-    # Less reliable, but 30d avg data is very unreliable and already looked everywhere...
 
 
 TODO: 
