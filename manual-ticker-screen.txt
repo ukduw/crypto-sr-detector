@@ -29,6 +29,28 @@ XTZ* - 24.49M, 685.08M, 0.04
 YFI - 18.25M, 168.74M, 0.11
 
 
+coinUSD 30d avg vol
+AAVE - 
+AVAX - 
+BCH - 
+BTC - 
+CRV - 
+DOGE - 
+DOT - 
+ETH - 
+GRT* - 
+LINK - 
+LTC - 
+PEPE - 
+SHIB - 
+SOL - 
+UNI - 
+USDC - 
+USDT - 
+XRP - 
+XTZ* - 
+YFI - 
+
 
 TODO: 
 
@@ -53,28 +75,6 @@ vol/cap ratio (<=0.10, >0.10)
     AVAX, BCH, BTC, DOGE, DOT, ETH, GRT, LINK, SHIB, SOL, UNI, XRP, XTZ / AAVE, CRV, LTC, PEPE, USDC, USDT, YFI
 
 
-
-coinUSD 30d avg vol
-AAVE - 
-AVAX - 
-BCH - 
-BTC - 
-CRV - 
-DOGE - 
-DOT - 
-ETH - 
-GRT* - 
-LINK - 
-LTC - 
-PEPE - 
-SHIB - 
-SOL - 
-UNI - 
-USDC - 
-USDT - 
-XRP - 
-XTZ* - 
-YFI - 
 
 # cross-check with coin-usd currency pair:
 30d average volume
