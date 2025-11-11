@@ -86,3 +86,5 @@ vol/cap ratio (<=0.10, >0.10)
     
     500-1,000mil
 
+untradeable
+    
