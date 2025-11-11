@@ -38,9 +38,12 @@ TODO:
 
 
 # coin-level conditions:
-# check available coin list for ...-200, 200-1,000mil, >1bil usd volume
     # test these bands; determine "sweet spot" if possible (e.g. 100-500mil, or narrower)
-    GRT, XTZ, YFI / 
+
+    avg vol (<250mil, 250-1,000mil, >1bil)
+    low / mid / high
+    CRV, GRT, XTZ, YFI, SHIB / AAVE, AVAX, BCH, DOT, LTC, PEPE, UNI / BTC, DOGE, ETH, LINK, SOL, USDC, USDT, XRP
+
 
 # consider market cap condition
     # <500mil, <1bil, >1bil - low, mid, high?
