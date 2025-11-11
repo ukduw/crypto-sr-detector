@@ -40,22 +40,27 @@ TODO:
 # coin-level conditions:
     # test these bands; determine "sweet spot" if possible (e.g. 100-500mil, or narrower)
 
-    avg vol (<250mil, 250-1,000mil, >1bil)
+avg vol (<250mil, 250-1,000mil, >1bil)
     low / mid / high
     CRV, GRT, XTZ, YFI, SHIB / AAVE, AVAX, BCH, DOT, LTC, PEPE, UNI / BTC, DOGE, ETH, LINK, SOL, USDC, USDT, XRP
 
-    market cap (<1, <10, >10bil)    
+market cap (<1, <10, >10bil)    
     low / mid / high
     CRV, GRT, XTZ, YFI / AAVE, AVAX, DOT, LTC, PEPE, SHIB, UNI / BCH, BTC, DOGE, ETH, LINK, SOL, USDC, USDT, XRP
 
-    vol/cap ratio (<=0.10, >0.10)
+vol/cap ratio (<=0.10, >0.10)
     low / high
     AVAX, BCH, BTC, DOGE, DOT, ETH, GRT, LINK, SHIB, SOL, UNI, XRP, XTZ / AAVE, CRV, LTC, PEPE, USDC, USDT, YFI
 
 
 
-# cross-check with currency pair:
-# 30d average volume
-    # 50-200, 200-500, 500-1,000mil usd
-# daily range/ATR?
-# spread?
+# cross-check with coin-usd currency pair:
+30d average volume
+    50-200mil
+    
+    
+    200-500mil
+    
+    
+    500-1,000mil
+
