@@ -31,7 +31,7 @@ YFI - 18.25M, 168.74M, 0.11
 
 
 TODO: 
-1. categorise by below conditions
+
 2. cross-check
 3. determine parameters and whether or not they're similar per category
 4. may need logic to use different trading parameters per category, 
