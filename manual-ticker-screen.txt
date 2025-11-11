@@ -29,7 +29,7 @@ XTZ* - 24.49M, 685.08M, 0.04
 YFI - 18.25M, 168.74M, 0.11
 
 
-coinUSD 30d avg vol
+coinUSD 30d avg vol, price, 1k position size ratio
 AAVE - 41.48k
 AVAX - 730.10k
 BCH - 11.36k
