@@ -54,6 +54,28 @@ vol/cap ratio (<=0.10, >0.10)
 
 
 
+coinUSD 30d avg vol
+AAVE - 
+AVAX - 
+BCH - 
+BTC - 
+CRV - 
+DOGE - 
+DOT - 
+ETH - 
+GRT* - 
+LINK - 
+LTC - 
+PEPE - 
+SHIB - 
+SOL - 
+UNI - 
+USDC - 
+USDT - 
+XRP - 
+XTZ* - 
+YFI - 
+
 # cross-check with coin-usd currency pair:
 30d average volume
     50-200mil
