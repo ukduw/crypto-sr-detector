@@ -34,7 +34,7 @@ API_KEY = os.getenv("API_KEY")
 SECRET_KEY = os.getenv("SECRET_KEY")
 
 coins = [] # update, short list of ~4 is fine for now
-dollar_position_size = 1000 # placeholder, depends on length of coin list
+dollar_position_size = 1000 # placeholder, should be fine regardless of coin list length; max concurrent positions set to 4 anyway
 
 universal = pytz.timezone("UTC")
 
