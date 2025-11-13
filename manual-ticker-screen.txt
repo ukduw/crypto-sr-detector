@@ -1,7 +1,5 @@
 TODO: 
-1. avg vol needs to be standardized for, e.g., $1,000 position size
-    -some of the volumes are low because the price is so high - still tradeable
-2. cross-check
+
 3. determine parameters and whether or not they're similar per category
 4. may need logic to use different trading parameters per category, 
 
