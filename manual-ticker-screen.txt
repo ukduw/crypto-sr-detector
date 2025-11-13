@@ -77,17 +77,7 @@ YFI - 87, 4785, 0.0024
 
 
 # cross-check with coin-usd currency pair:
-30d average volume
-    <1mil
-    
-    
-    <10mil
+All 20 tradeable
 
-
-    <100mil
-    
-    
-    >100mil
-
-
-untradeable
+Be aware if position sizes increase significantly:
+    GRT, XTZ, YFI
