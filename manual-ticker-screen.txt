@@ -1,9 +1,16 @@
-full list (22): [AAVE, AVAX, BAT, BCH, BTC, CRV, DOGE, DOT, ETH, GRT, LINK, LTC, MKR, PEPE, SHIB, SOL, SUSHI, TRUMP, UNI, USDC, USDG, USDT, XRP, XTZ, YFI]
+TODO: 
+1. avg vol needs to be standardized for, e.g., $1,000 position size
+    -some of the volumes are low because the price is so high - still tradeable
+2. cross-check
+3. determine parameters and whether or not they're similar per category
+4. may need logic to use different trading parameters per category, 
 
+
+
+full list (22): [AAVE, AVAX, BAT, BCH, BTC, CRV, DOGE, DOT, ETH, GRT, LINK, LTC, MKR, PEPE, SHIB, SOL, SUSHI, TRUMP, UNI, USDC, USDG, USDT, XRP, XTZ, YFI]
 
 UNAVAILABLE / N/A (2): MKR, BAT
     NOTE: MKR rebranded to SKY - leave here for now...
-
 
 AVAILABLE (20)
 (30d avg vol, market cap, avg vol/cap ratio)
@@ -29,6 +36,23 @@ XTZ* - 24.49M, 685.08M, 0.04
 YFI - 18.25M, 168.74M, 0.11
 
 
+# coin-level conditions:
+    # test these bands; determine "sweet spot" if possible (e.g. 100-500mil, or narrower)
+
+avg vol (<250mil, 250-1,000mil, >1bil)
+    low / mid / high
+    CRV, GRT, XTZ, YFI, SHIB / AAVE, AVAX, BCH, DOT, LTC, PEPE, UNI / BTC, DOGE, ETH, LINK, SOL, USDC, USDT, XRP
+
+market cap (<1, <10, >10bil)    
+    low / mid / high
+    CRV, GRT, XTZ, YFI / AAVE, AVAX, DOT, LTC, PEPE, SHIB, UNI / BCH, BTC, DOGE, ETH, LINK, SOL, USDC, USDT, XRP
+
+vol/cap ratio (<=0.10, >0.10)
+    low / high
+    AVAX, BCH, BTC, DOGE, DOT, ETH, GRT, LINK, SHIB, SOL, UNI, XRP, XTZ / AAVE, CRV, LTC, PEPE, USDC, USDT, YFI
+
+
+
 coinUSD 30d avg vol, price, 1k position size ratio
 AAVE - 41.48k, 209
 AVAX - 730.10k, 17
@@ -50,31 +74,6 @@ USDT - 36.87M, 1
 XRP - 87.08M, 2.5
 XTZ - 858.78k, 0.6
 YFI - 87, 4785
-
-
-TODO: 
-1. avg vol needs to be standardized for, e.g., $1,000 position size
-    -some of the volumes are low because the price is so high - still tradeable
-2. cross-check
-3. determine parameters and whether or not they're similar per category
-4. may need logic to use different trading parameters per category, 
-
-
-# coin-level conditions:
-    # test these bands; determine "sweet spot" if possible (e.g. 100-500mil, or narrower)
-
-avg vol (<250mil, 250-1,000mil, >1bil)
-    low / mid / high
-    CRV, GRT, XTZ, YFI, SHIB / AAVE, AVAX, BCH, DOT, LTC, PEPE, UNI / BTC, DOGE, ETH, LINK, SOL, USDC, USDT, XRP
-
-market cap (<1, <10, >10bil)    
-    low / mid / high
-    CRV, GRT, XTZ, YFI / AAVE, AVAX, DOT, LTC, PEPE, SHIB, UNI / BCH, BTC, DOGE, ETH, LINK, SOL, USDC, USDT, XRP
-
-vol/cap ratio (<=0.10, >0.10)
-    low / high
-    AVAX, BCH, BTC, DOGE, DOT, ETH, GRT, LINK, SHIB, SOL, UNI, XRP, XTZ / AAVE, CRV, LTC, PEPE, USDC, USDT, YFI
-
 
 
 # cross-check with coin-usd currency pair:
