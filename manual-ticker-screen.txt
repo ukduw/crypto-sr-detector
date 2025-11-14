@@ -79,3 +79,14 @@ All 20 tradeable
 
 Be aware if position sizes increase significantly:
     GRT, XTZ, YFI
+
+
+
+priority
+high
+
+
+mid
+
+
+low
