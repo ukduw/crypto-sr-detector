@@ -6,6 +6,9 @@ TODO:
         - start with only these in coin list []
     - next, include mid priority coins
         - needs logic to switch between parameters
+        - best way possible would be:
+5. dynamically categorize coins in list [] based on data from crypto API, e.g. using range? or some percentage-based derivative
+    - then, dynamically change their parameters in line with the technicals (better than broad categories)
 
 
 
