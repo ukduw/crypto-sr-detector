@@ -36,7 +36,10 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 coins = ["PEPE/USD", "DOT/USD", "LINK/USD", "SOL/USD"]
     # top 4 high priority coins - only need to expand list if position sizes are far higher
     # OR, to add coins that DON'T trade in sympathy (only, like, 2...) to catch more trades
-dollar_position_size = 1000 # placeholder, should be fine regardless of coin list length; max concurrent positions set to 4 anyway
+dollar_position_size = 1000
+    # placeholder, should be fine regardless of coin list length; max concurrent positions set to 4 anyway
+    # vast majority of coins track, so would be better to just increase position size per play, rather than number of total plays
+        # coins also have very high position size ceiling...
 
 universal = pytz.timezone("UTC")
 
