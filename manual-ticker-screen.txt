@@ -92,9 +92,10 @@ Be aware if position sizes increase significantly (100k+):
 
 priority
 high
-
+[]
 
 mid
-
+[]
 
 low
+[]
