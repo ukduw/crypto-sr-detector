@@ -99,3 +99,15 @@ mid
 
 low
 []
+
+
+# NOTE: they (almost) all look identical/trade in sympathy
+    # probably track major events closely, rather than acting as hedge, as advertised
+# aside from a handful, they're all tradeable, so priority should be based on volatility/range
+    # if (the vast majority of the time), they'll all simultaneously be wins/losses, there's no point spliting position sizes between so many
+# mid priority coins only matter once account size becomes prohibitive, which is a long way away
+# for now, makes more sense to focus position sizes on fewer
+
+# NOTE: needs significant parameter tweaks in sr detector AND trading script
+# NOTE: trading script needs big changes to profit taking logic...
+
