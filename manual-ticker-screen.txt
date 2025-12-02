@@ -92,13 +92,14 @@ Be aware if position sizes increase significantly (100k+):
 
 priority
 high (3)
-[PEPE, SOL, AAVE, ]
+[DOT, PEPE, SOL, CRV, AAVE, GRT, LINK]
 
 mid (0)
-[]
+[DOGE, ETH, UNI, AVAX, SHIB, XRP, BCH, LTC, BTC]
+    # (in descending order)
 
 mid-low (1)
-[YFI]
+[XTZ, YFI]
 
 low (2)
 [USDC, USDT]
