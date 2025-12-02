@@ -92,13 +92,14 @@ Be aware if position sizes increase significantly (100k+):
 
 priority
 high
-[]
+[PEPE, SOL, AAVE, ]
 
 mid
-[]
+[YFI]
 
 low
-[]
+[USDC, USDT]
+    # looks untradeable; don't remember them looking like that(?)
 
 
 # NOTE: they (almost) all look identical/trade in sympathy
