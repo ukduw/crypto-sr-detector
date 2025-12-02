@@ -33,8 +33,9 @@ load_dotenv()
 API_KEY = os.getenv("API_KEY")
 SECRET_KEY = os.getenv("SECRET_KEY")
 
-coins = ["AAVEUSD", "AVAXUSD", "BCHUSD", "BTCUSD", "CRVUSD", "DOGEUSD", "DOTUSD", "ETHUSD", "GRTUSD", "LINKUSD", "LTCUSD", "PEPEUSD", "SHIBUSD", "SOLUSD", "UNIUSD", "USDCUSD", "USDTUSD", "XRPUSD", "XTZUSD", "YFIUSD"]
-    # PLACEHOLDER, REFINE
+coins = ["PEPE/USD", "DOT/USD", "LINK/USD", "SOL/USD"]
+    # top 4 high priority coins - only need to expand list if position sizes are far higher
+    # OR, to add coins that DON'T trade in sympathy (only, like, 2...) to catch more trades
 dollar_position_size = 1000 # placeholder, should be fine regardless of coin list length; max concurrent positions set to 4 anyway
 
 universal = pytz.timezone("UTC")
