@@ -23,10 +23,13 @@ import matplotlib.pyplot as plt
 # cap >= 200mil, vol/cap 0.02-0.20, vol 500-1,000mil: 6 coins
 
 
+# 1. determine level parameters (and take-profit conditions for bot script)
+# 2. test, tweak parameters, remove prints/plots/comments
+# 3. write readme
 
-# determine level parameters (and take-profit conditions for bot script)
-# test, tweak parameters, remove prints/plots/comments
-# write readme
+# 4. future: 
+    # dynamically categorize coins in list [] based on data from crypto API, e.g. using range? or some percentage-based derivative
+    # then, dynamically change their parameters in line with the technicals (better than broad categories)
 
 
 load_dotenv()
