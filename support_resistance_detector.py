@@ -18,9 +18,10 @@ import matplotlib.pyplot as plt
     # updated to "BTC/USD", but legacy version above is still backwards compatible...
 
 # full list: 22 [AAVE, AVAX, BAT, BCH, BTC, CRV, DOGE, DOT, ETH, GRT, LINK, LTC, MKR, PEPE, SHIB, SOL, SUSHI, TRUMP, UNI, USDC, USDG, USDT, XRP, XTZ, YFI]
-# cap >= 200mil, vol/cap 0.02-0.20, vol 50-200mil: 45 coins
-# cap >= 200mil, vol/cap 0.02-0.20, vol 200-500mil: 17 coins
-# cap >= 200mil, vol/cap 0.02-0.20, vol 500-1,000mil: 6 coins
+    # high: 7 [PEPE, DOT, LINK, SOL, CRV, AAVE, GRT]
+    # upper-mid: 9 [DOGE, ETH, UNI, AVAX, SHIB, XRP, BCH, LTC, BTC]
+    # mid: 2 [XTZ, YFI]
+# total: 18
 
 
 # 1. determine level parameters (and take-profit conditions for bot script)
