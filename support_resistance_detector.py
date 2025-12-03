@@ -17,12 +17,14 @@ import matplotlib.pyplot as plt
 # subscribe as currency pair, e.g. "BTCUSD"
     # updated to "BTC/USD", but legacy version above is still backwards compatible...
 
-# full list: 22 [AAVE, AVAX, BAT, BCH, BTC, CRV, DOGE, DOT, ETH, GRT, LINK, LTC, MKR, PEPE, SHIB, SOL, SUSHI, TRUMP, UNI, USDC, USDG, USDT, XRP, XTZ, YFI]
+# full list: 25 [AAVE, AVAX, BAT, BCH, BTC, CRV, DOGE, DOT, ETH, GRT, LINK, LTC, MKR, PEPE, SHIB, SOL, SUSHI, TRUMP, UNI, USDC, USDG, USDT, XRP, XTZ, YFI]
+# tradeable: 18 [AAVE, AVAX, BCH, BTC, CRV, DOGE, DOT, ETH, GRT, LINK, LTC, PEPE, SHIB, SOL, UNI, XRP, XTZ, YFI]
     # high: 7 [PEPE, DOT, LINK, SOL, CRV, AAVE, GRT]
     # upper-mid: 9 [DOGE, ETH, UNI, AVAX, SHIB, XRP, BCH, LTC, BTC]
     # mid: 2 [XTZ, YFI]
-# total: 18
 
+# UNACCOUNTED FOR: 3 [SUSHI, TRUMP, USDG] 
+    # REDO
 
 # 1. determine level parameters (and take-profit conditions for bot script)
 # 2. test, tweak parameters, remove prints/plots/comments
