@@ -101,6 +101,3 @@ low (2)
 # mid priority coins only matter once account size becomes prohibitive, which is a long way away
 # for now, makes more sense to focus position sizes on fewer
 
-# NOTE: needs significant parameter tweaks in sr detector AND trading script
-# NOTE: trading script needs big changes to profit taking logic...
-
