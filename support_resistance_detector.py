@@ -156,7 +156,7 @@ def level_detector():
 
     for coin in all_levels:
         for level in all_levels[coin]:
-            diff1 = abs(level - close[coin] * 1.05) # 5%, TWEAK, needs research
+            diff1 = abs(level - close[coin] * 1.0025)
             
             if diff1 < smallest_diff1:
                 closest_highs = [level]
@@ -166,7 +166,7 @@ def level_detector():
         entry = max(closest_highs)
 
         for level in all_levels[coin]:
-            diff2 = abs(level - entry * 0.95) # 5% from entry, TWEAK
+            diff2 = abs(level - entry * 0.9975)
 
             if diff2 < smallest_diff2:
                 closest_lows = [level]
