@@ -69,8 +69,9 @@ YFI - 87, 4785, 0.0024
 
 
 # cross-check with coin-usd currency pair:
-All 20 tradeable
+All 23 tradeable
 [AAVE, AVAX, BCH, BTC, CRV, DOGE, DOT, ETH, GRT, LINK, LTC, PEPE, SHIB, SOL, SUSHI, TRUMP, UNI, USDC, USDG, USDT, XRP, XTZ, YFI]
+    -SUSHI, TRUMP, USDG - unaccounted for; re-check
 
 Be aware if position sizes increase significantly (100k+):
     GRT, XTZ, YFI
