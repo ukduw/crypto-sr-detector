@@ -22,9 +22,16 @@ import matplotlib.pyplot as plt
     # high: 7 [PEPE, DOT, LINK, SOL, CRV, AAVE, GRT]
     # upper-mid: 9 [DOGE, ETH, UNI, AVAX, SHIB, XRP, BCH, LTC, BTC]
     # mid: 2 [XTZ, YFI]
+# NOTE: "upper-mid" is actually just more of the same (all track), just with less range...
+    # these would only be relevant if account size was so huge that it became prohibitive and had to be spread out amongst 16 coins...
+        # also, could just add as many as leverage, but alpaca only allows 2x/4x, depending... so irrelevant
+        # binance allows 10x/20x, so will be relevant in future...
+    # consider getting rid of "upper-mid" altogether
+    # "mid" are less volatile/have less range, but DO NOT TRACK, so are actually more valuable
 
 # UNACCOUNTED FOR: 3 [SUSHI, TRUMP, USDG] 
     # REDO
+
 
 # 1. determine level parameters (and take-profit conditions for bot script)
 # 2. test, tweak parameters, remove prints/plots/comments
