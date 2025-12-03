@@ -1,16 +1,3 @@
-TODO: 
-3. determine parameters and whether or not they're similar per category
-4. may need logic to use different trading parameters per category
-    - start by categorizing into high, mid, low priority
-    - high uses roughly same parameters as stocks; no need to change sr detector nor trading script too much
-        - start with only these in coin list []
-    - next, include mid priority coins
-        - needs logic to switch between parameters
-        - best way possible would be:
-5. dynamically categorize coins in list [] based on data from crypto API, e.g. using range? or some percentage-based derivative
-    - then, dynamically change their parameters in line with the technicals (better than broad categories)
-
-
 
 full list (22): [AAVE, AVAX, BAT, BCH, BTC, CRV, DOGE, DOT, ETH, GRT, LINK, LTC, MKR, PEPE, SHIB, SOL, SUSHI, TRUMP, UNI, USDC, USDG, USDT, XRP, XTZ, YFI]
 
