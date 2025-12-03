@@ -25,6 +25,8 @@ import matplotlib.pyplot as plt
 
 # 1. determine level parameters (and take-profit conditions for bot script)
 # 2. test, tweak parameters, remove prints/plots/comments
+    # needs significant parameter tweaks in sr detector AND trading script
+    # trading script needs big changes to profit taking logic...
 # 3. write readme
 
 # 4. future: 
