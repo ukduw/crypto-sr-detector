@@ -210,6 +210,5 @@ def level_detector():
     #}
 
 
-if __name__ == "main":
-    level_detector()
+level_detector()
 
