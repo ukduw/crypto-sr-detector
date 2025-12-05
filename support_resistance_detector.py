@@ -97,7 +97,6 @@ def level_detector():
         bars = bars_tuple[1][coin] # list of dicts
 
         for bar in bars:
-            #print(bar)
             highs[bar.symbol] = [bar.high] if bar.symbol not in highs else highs[bar.symbol].append(bar.high)
             lows[bar.symbol] = [bar.low] if bar.symbol not in lows else lows[bar.symbol].append(bar.low)
         close[coin] = bars[-1].close
