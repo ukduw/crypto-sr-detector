@@ -100,6 +100,7 @@ def level_detector():
                 # { 'close': , 'high': , 'low': , 'open': , 'symbol': , 'timestamp': , 'trade_count': , 'volume': , 'vwap': }
         bars = bars_tuple[1][coin] # list of dicts
 
+        print(bars)
         for bar in bars:
             highs[bar.symbol] = [bar.high] if bar.symbol not in highs else highs[bar.symbol].append(bar.high)
             lows[bar.symbol] = [bar.low] if bar.symbol not in lows else lows[bar.symbol].append(bar.low)
