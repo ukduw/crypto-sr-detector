@@ -1,5 +1,4 @@
 from alpaca.data.historical.crypto import CryptoHistoricalDataClient
-from alpaca.data.enums import CryptoFeed
 from alpaca.data.requests import CryptoBarsRequest
 from alpaca.data.timeframe import TimeFrame
 
@@ -95,7 +94,7 @@ def level_detector():
             feed="us"
         )
 
-        bars_tuple = historical_client.get_crypto_bars(request_params, CryptoFeed = CryptoFeed.US)
+        bars_tuple = historical_client.get_crypto_bars(request_params)
             # structure is tuple, dict (symbol as key), list of dicts
             # ('data', {'PEPE/USD': [ {'a': , 'b': , 'c': , ...}, {...}, ...] } )
                 # { 'close': , 'high': , 'low': , 'open': , 'symbol': , 'timestamp': , 'trade_count': , 'volume': , 'vwap': }
