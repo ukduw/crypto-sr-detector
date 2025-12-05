@@ -98,9 +98,10 @@ def level_detector():
             # structure is tuple, dict (symbol as key), list of dicts
             # ('data', {'PEPE/USD': [ {'a': , 'b': , 'c': , ...}, {...}, ...] } )
                 # { 'close': , 'high': , 'low': , 'open': , 'symbol': , 'timestamp': , 'trade_count': , 'volume': , 'vwap': }
-        bars = bars_tuple[1][coin] # list of dicts
-
+        print(bars_tuple)
+        bars = bars_tuple[0][coin] # list of dicts
         print(bars)
+        
         for bar in bars:
             highs[bar.symbol] = [bar.high] if bar.symbol not in highs else highs[bar.symbol].append(bar.high)
             lows[bar.symbol] = [bar.low] if bar.symbol not in lows else lows[bar.symbol].append(bar.low)
