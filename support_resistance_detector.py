@@ -92,6 +92,10 @@ def level_detector():
 
         bars = historical_client.get_crypto_bars(request_params)
         for bar in bars:
+            #print(bar)
+                # bar.symbol... not valid
+                # structure is tuple, dict (symbol as key), list of dicts
+                    # ('data', {'PEPE/USD': [ {'a': , 'b': , 'c': , ...}, {...}, ...] } )
             highs[bar.symbol] = [bar.high] if bar.symbol not in highs else highs[bar.symbol].append(bar.high)
             lows[bar.symbol] = [bar.low] if bar.symbol not in lows else lows[bar.symbol].append(bar.low)
         close[coin] = bars[-1].close
