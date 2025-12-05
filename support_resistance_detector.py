@@ -80,6 +80,10 @@ def level_detector():
     now = datetime.datetime.now(universal)
     start_time = now - datetime.timedelta(minutes=lookback_minutes) # schedule for 23:30
 
+    # supposed to return 282 bars; only returned 20-30...
+        # probably not because of bar.symbol-related error; printed before that, and the entire tuple printed
+    # check above timedelta logic for error(s)
+
     # === API REQUESTS === #
     for coin in coins:
         request_params = CryptoBarsRequest(
