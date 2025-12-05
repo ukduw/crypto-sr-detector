@@ -162,6 +162,7 @@ def level_detector():
                     support.pop[j]
         all_levels[coin] = all_levels[coin] + support
 
+    print("ALL LEVELS", all_levels)
 
     # PLOT - REMOVE LATER
     for coin in all_levels:
