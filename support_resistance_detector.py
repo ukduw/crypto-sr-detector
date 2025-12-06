@@ -86,6 +86,8 @@ def level_detector():
     # update: bars returned are 1 per ~hour, from start_time to now (correctly)
         # problem is not timedelta logic
         # no idea why it's only returning 1/hr rather than 1/5min
+            # note: they're 51min(?) apart, for some reason
+            # will experiment with TimeFrame...
 
     # === API REQUESTS === #
     for coin in coins:
