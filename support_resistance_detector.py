@@ -104,7 +104,7 @@ def level_detector():
             # {'PEPE/USD': [ {'a': , 'b': , 'c': , ...}, {...}, ...] }
                 # { 'close': , 'high': , 'low': , 'open': , 'symbol': , 'timestamp': , 'trade_count': , 'volume': , 'vwap': }
         bars = bars_dict[coin] # list of dicts
-        print(bars)
+        #print(bars)
         
         for bar in bars:
             highs.setdefault(bar.symbol, []).append(bar.high)
@@ -139,9 +139,7 @@ def level_detector():
             for j in range(len(resistance)):
                 if (resistance[i] - stdevs[coin][0]) <= resistance[j] < resistance[i]:
                     resistance.pop(j)
-        
-        int_resistance = [int(level) for level in resistance]
-        all_levels[coin] = int_resistance
+        all_levels[coin] = resistance
     
     for coin in lows:
         support = []
@@ -163,12 +161,11 @@ def level_detector():
             for j in range(len(support)):
                 if (support[i] + stdevs[coin][1]) >= support[j] > support[i]:
                     support.pop[j]
-
-        int_support = [int(level) for level in support]
-        all_levels[coin] = all_levels[coin] + int_support
+        all_levels[coin] = all_levels[coin] + support
 
     print("ALL LEVELS", all_levels)
     # NOT WORKING - results in lists full of np.int64(some_number) - numpy int?
+        # converting to int doesn't work...
 
     # PLOT - REMOVE LATER
     for coin in all_levels:
