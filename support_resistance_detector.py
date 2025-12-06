@@ -105,8 +105,10 @@ def level_detector():
         print(bars)
         
         for bar in bars:
-            highs[bar.symbol] = [bar.high] if bar.symbol not in highs else highs[bar.symbol].append(bar.high)
-            lows[bar.symbol] = [bar.low] if bar.symbol not in lows else lows[bar.symbol].append(bar.low)
+            highs.setdefault(bar.symbol, []).append(bar.high)
+            lows.setdefault(bar.symbol, []).append(bar.low)
+            #highs[bar.symbol] = [bar.high] if bar.symbol not in highs else highs[bar.symbol].append(bar.high)
+            #lows[bar.symbol] = [bar.low] if bar.symbol not in lows else lows[bar.symbol].append(bar.low)
         close[coin] = bars[-1].close
 
     print("HIGHS", highs)
