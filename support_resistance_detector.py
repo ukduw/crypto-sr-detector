@@ -163,12 +163,15 @@ def level_detector():
         all_levels[coin] = all_levels[coin] + support
 
     print("ALL LEVELS", all_levels)
+    # NOT WORKING - results in lists full of np.int64(some_number) - numpy int?
 
     # PLOT - REMOVE LATER
     for coin in all_levels:
         plt.plot(highs[coin], lows[coin])
         plt.plot(all_levels[coin], "rx")
         plt.show()
+    # NOT WORKING - "FigureCanvasAgg is non-interactive and thus cannot be shown    plt.show()"
+    # CAN do it manually...
 
 
     # === STRATEGY PARAMETERS === #
