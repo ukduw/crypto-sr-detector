@@ -111,9 +111,6 @@ def level_detector():
             lows.setdefault(bar.symbol, []).append(bar.low)
         close[coin] = bars[-1].close
 
-    print("HIGHS", highs)
-    print("LOWS", lows)
-    print("CLOSE", close)
 
     # === STDEV === #
     for coin in highs:
