@@ -94,12 +94,11 @@ def level_detector():
             feed="us"
         )
 
-        bars_tuple = historical_client.get_crypto_bars(request_params)
-            # structure is tuple, dict (symbol as key), list of dicts
-            # ('data', {'PEPE/USD': [ {'a': , 'b': , 'c': , ...}, {...}, ...] } )
+        bars_dict = historical_client.get_crypto_bars(request_params)
+            # dict (symbol as key), list of dicts
+            # {'PEPE/USD': [ {'a': , 'b': , 'c': , ...}, {...}, ...] }
                 # { 'close': , 'high': , 'low': , 'open': , 'symbol': , 'timestamp': , 'trade_count': , 'volume': , 'vwap': }
-        print(bars_tuple)
-        bars = bars_tuple[0][coin] # list of dicts
+        bars = bars_dict[coin] # list of dicts
         print(bars)
         
         for bar in bars:
