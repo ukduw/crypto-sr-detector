@@ -119,7 +119,6 @@ def level_detector():
 
         stdevs[coin] = [highs_stdev, lows_stdev]
 
-    print("STDEV", stdevs)
 
     # === S/R DETECT, MERGE LEVELS === #
     for coin in highs:
