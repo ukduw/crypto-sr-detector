@@ -83,6 +83,9 @@ def level_detector():
     # supposed to return 282 bars; only returned 20-30...
         # probably not because of bar.symbol-related error; printed before that, and the entire tuple printed
     # check above timedelta logic for error(s)
+    # update: bars returned are 1 per ~hour, from start_time to now (correctly)
+        # problem is not timedelta logic
+        # no idea why it's only returning 1/hr rather than 1/5min
 
     # === API REQUESTS === #
     for coin in coins:
