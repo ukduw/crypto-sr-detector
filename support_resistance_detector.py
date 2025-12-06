@@ -139,7 +139,10 @@ def level_detector():
             for j in range(len(resistance)):
                 if (resistance[i] - stdevs[coin][0]) <= resistance[j] < resistance[i]:
                     resistance.pop(j)
-        all_levels[coin] = resistance
+        
+        int_resistance = [int(level) for level in resistance]
+        all_levels[coin] = int_resistance
+    
     for coin in lows:
         support = []
         for low in lows[coin]:
@@ -160,7 +163,9 @@ def level_detector():
             for j in range(len(support)):
                 if (support[i] + stdevs[coin][1]) >= support[j] > support[i]:
                     support.pop[j]
-        all_levels[coin] = all_levels[coin] + support
+
+        int_support = [int(level) for level in support]
+        all_levels[coin] = all_levels[coin] + int_support
 
     print("ALL LEVELS", all_levels)
     # NOT WORKING - results in lists full of np.int64(some_number) - numpy int?
