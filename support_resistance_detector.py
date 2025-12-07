@@ -121,16 +121,18 @@ def level_detector():
 
 
     # === S/R DETECT, MERGE LEVELS === #
+    #
+
     for coin in highs:
         resistance = []
         for high in highs[coin]:
             bar_window.append(high)
             if len(bar_window) == 6:
-                no_dupes = [key for key, _ in groupby(bar_window)]
+                #no_dupes = [key for key, _ in groupby(bar_window)]
                 if len(no_dupes) >= 3:
                     peaks, _ = find_peaks(no_dupes)
                     print(peaks) # REMEMBER TO REMOVE
-                    peaks = [key for key, _ in groupby(peaks)]
+                    #peaks = [key for key, _ in groupby(peaks)]
                     resistance.append(peaks)
                 else:
                     resistance.append(max(no_dupes))
@@ -147,12 +149,12 @@ def level_detector():
         for low in lows[coin]:
             bar_window.append(low * -1)
             if len(bar_window) == 6:
-                no_dupes2 = [key for key, _ in groupby(bar_window)]
+                #no_dupes2 = [key for key, _ in groupby(bar_window)]
                 if len(no_dupes2) >= 3:
                     peaks2, _ = find_peaks(no_dupes2)
                     print(peaks2) # REMEMBER TO REMOVE
                     peaks2 = [-1 * x for x in peaks2]
-                    peaks2 = [key for key, _ in groupby(peaks2)]
+                    #peaks2 = [key for key, _ in groupby(peaks2)]
                     support.append(peaks2)
                 else:
                     no_dupes2 = [-1 * x for x in no_dupes2]
