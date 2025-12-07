@@ -17,6 +17,9 @@ pillow==11.3.0
 pydantic==2.12.2
 pydantic_core==2.41.4
 pyparsing==3.2.5
+PyQt6==6.10.1
+PyQt6-Qt6==6.10.1
+PyQt6_sip==13.10.3
 python-dateutil==2.9.0.post0
 python-dotenv==1.1.1
 pytz==2025.2
