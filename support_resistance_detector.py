@@ -140,6 +140,7 @@ def level_detector():
                     resistance.append(unique_peaks)
                 else:
                     resistance.append(max(no_dupes))
+            no_dupes.clear()
         bar_window.clear()
         #resistance = list(chain.from_iterable(resistance))
         for i in range(len(resistance)):
@@ -169,6 +170,7 @@ def level_detector():
                     #no_dupes2 = [-1 * x for x in no_dupes2]
                     inverse_sup = max(no_dupes2)
                     support.append(-1 * inverse_sup)
+            no_dupes2.clear()
         bar_window.clear()
         #support = list(chain.from_iterable(support))
         for i in range(len(support)):
