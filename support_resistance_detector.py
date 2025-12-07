@@ -175,6 +175,7 @@ def level_detector():
     # NOT WORKING - "FigureCanvasAgg is non-interactive and thus cannot be shown    plt.show()"
     # CAN do it manually...
     # can try uninstalling/re-installing matplotlib; problem may also be newer python version needs (pip install) PyQt6
+        # remember to uninstall (and remove from requirements) PyQt6 after plotting/testing; not needed in finished version
 
 
     # === STRATEGY PARAMETERS === #
