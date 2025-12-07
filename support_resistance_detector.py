@@ -6,6 +6,7 @@ from dotenv import load_dotenv
 import os
 
 import datetime, pytz, statistics
+import numpy as np
 
 from collections import deque
 from itertools import groupby, chain
@@ -131,19 +132,24 @@ def level_detector():
 
     for coin in highs:
         resistance = []
+        no_dupes = []
         for high in highs[coin]:
             bar_window.append(high)
             if len(bar_window) == 6:
+                for lvl in bar_window:
+                    if not no_dupes or no_dupes[-1] != lvl:
+                        no_dupes.append(lvl)
                 #no_dupes = [key for key, _ in groupby(bar_window)]
                 if len(no_dupes) >= 3:
                     peaks, _ = find_peaks(no_dupes)
                     print(peaks) # REMEMBER TO REMOVE
+                    unique_peaks = np.unique(peaks)
                     #peaks = [key for key, _ in groupby(peaks)]
-                    resistance.append(peaks)
+                    resistance.append(unique_peaks)
                 else:
                     resistance.append(max(no_dupes))
         bar_window.clear()
-        resistance = list(chain.from_iterable(resistance))
+        #resistance = list(chain.from_iterable(resistance))
         for i in range(len(resistance)):
             for j in range(len(resistance)):
                 if (resistance[i] - stdevs[coin][0]) <= resistance[j] < resistance[i]:
