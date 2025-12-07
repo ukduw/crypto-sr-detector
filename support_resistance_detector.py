@@ -1,6 +1,6 @@
 from alpaca.data.historical.crypto import CryptoHistoricalDataClient
 from alpaca.data.requests import CryptoBarsRequest
-from alpaca.data.timeframe import TimeFrame
+from alpaca.data.timeframe import TimeFrame, TimeFrameUnit
 
 from dotenv import load_dotenv
 import os
@@ -93,7 +93,7 @@ def level_detector():
     for coin in coins:
         request_params = CryptoBarsRequest(
             symbol_or_symbols=coin,
-            timeframe=TimeFrame(5, TimeFrame.Minute),
+            timeframe=TimeFrame(5, TimeFrameUnit.Minute),
             start=start_time,
             end=now,
             feed="us"
