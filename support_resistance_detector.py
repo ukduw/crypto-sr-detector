@@ -121,7 +121,13 @@ def level_detector():
 
 
     # === S/R DETECT, MERGE LEVELS === #
-    #
+    # 1. first dupe removal must be unsorted (retain original order)
+        # since it's passed to find_peaks
+    # 2. second dupe removal can just use np.unique(), which sorts
+        # since it's just a list of levels that'll be iterated through to find closest appropriate level
+
+    # first dupe removal probably needs manual iteration like stdev part
+        # iterate, if != to [-1] index, append - build list
 
     for coin in highs:
         resistance = []
