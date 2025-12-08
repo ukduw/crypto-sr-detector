@@ -113,6 +113,13 @@ def level_detector():
 
 
     # === S/R DETECT, MERGE LEVELS === #
+
+    # PROBLEM IS WITH FIND_PEAKS()
+        # need to print everything... too much going on and can't be sure things aren't going wrong at multiple stages
+    # the if (resistance[i] - stdevs[coin][0]) <= resistance[j] < resistance[i] line isn't working now
+        # sometimes, peaks is an array containing 0, 1 or 2 elements
+        # is it returning the indices of the peaks in no_dupes...?
+
     for coin in highs:
         resistance = []
         no_dupes = []
