@@ -131,19 +131,23 @@ def level_detector():
                         no_dupes.append(lvl)
                 #no_dupes = [key for key, _ in groupby(bar_window)]
                 if len(no_dupes) >= 3:
-                    peaks, _ = find_peaks(no_dupes)
+                    peaks, _ = find_peaks(no_dupes) # needs params???
                     print(peaks) # REMEMBER TO REMOVE
                     unique_peaks = np.unique(peaks)
+                    print(unique_peaks) # REMEMBER TO REMOVE
                     #peaks = [key for key, _ in groupby(peaks)]
                     resistance.append(unique_peaks)
                 else:
                     resistance.append(max(no_dupes))
+            print(bar_window) # REMEMBER TO REMOVE
+            print(no_dupes) # REMEMBER TO REMOVE
             no_dupes.clear()
         bar_window.clear()
         #resistance = list(chain.from_iterable(resistance))
         for i in range(len(resistance)):
             for j in range(len(resistance)):
                 if (resistance[i] - stdevs[coin][0]) <= resistance[j] < resistance[i]:
+                    print("KEPT", resistance[i], "DELETED", resistance[j]) # REMEMBER TO REMOVE
                     resistance.pop(j)
         all_levels[coin] = resistance
     
