@@ -132,15 +132,20 @@ def level_detector():
                 if len(no_dupes) >= 3:
                     peaks, _ = find_peaks(no_dupes) # needs params???
                     print(peaks, no_dupes[peaks]) # REMEMBER TO REMOVE
+                    
                     unique_peaks = np.unique(peaks)
                     print(unique_peaks) # REMEMBER TO REMOVE
+
                     resistance.append(unique_peaks)
                 else:
                     resistance.append(max(no_dupes))
+
             print(bar_window) # REMEMBER TO REMOVE
             print(no_dupes) # REMEMBER TO REMOVE
+
             no_dupes.clear()
         bar_window.clear()
+
         for i in range(len(resistance)):
             for j in range(len(resistance)):
                 if (resistance[i] - stdevs[coin][0]) <= resistance[j] < resistance[i]:
@@ -160,19 +165,25 @@ def level_detector():
                 if len(no_dupes2) >= 3:
                     peaks2, _ = find_peaks(no_dupes2) # needs params???
                     print(peaks2, no_dupes2[peaks2]) # REMEMBER TO REMOVE
+
                     peaks2 = [-1 * x for x in peaks2]
                     print(peaks2) # REMEMBER TO REMOVE
+
                     unique_peaks2 = np.unique(peaks2)
                     print(unique_peaks2) # REMEMBER TO REMOVE
+
                     support.append(unique_peaks2)
                 else:
                     inverse_sup = max(no_dupes2)
                     print(-1 * inverse_sup)
                     support.append(-1 * inverse_sup)
+
             print(bar_window) # REMEMBER TO REMOVE
             print(no_dupes2) # REMEMBER TO REMOVE
+
             no_dupes2.clear()
         bar_window.clear()
+        
         for i in range(len(support)):
             for j in range(len(support)):
                 if (support[i] + stdevs[coin][1]) >= support[j] > support[i]:
