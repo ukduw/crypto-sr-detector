@@ -190,6 +190,10 @@ def level_detector():
     print("ALL LEVELS", all_levels)
     # NOT WORKING - results in lists full of np.int64(some_number) - numpy int?
         # converting to int doesn't work...
+    # no longer returning np.int64()'s - this problem was probably from groupby()
+    # currently returning indices from find_peaks
+        # be aware that some return NO index or MULTIPLE indices
+        # needs if empty logic to avoid errors
 
     # PLOT - REMOVE LATER
     for coin in all_levels:
