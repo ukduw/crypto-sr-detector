@@ -130,7 +130,7 @@ def level_detector():
                     if not no_dupes or no_dupes[-1] != lvl:
                         no_dupes.append(lvl)
                 if len(no_dupes) >= 3:
-                    peaks, _ = find_peaks(no_dupes) # needs params???
+                    peaks, _ = find_peaks(no_dupes) # returns 0, 1 or 2 indices
                     print(peaks, no_dupes[peaks]) # REMEMBER TO REMOVE
                     
                     unique_peaks = np.unique(peaks)
@@ -163,7 +163,7 @@ def level_detector():
                     if not no_dupes2 or no_dupes2[-1] != lvl2:
                         no_dupes2.append(lvl2)
                 if len(no_dupes2) >= 3:
-                    peaks2, _ = find_peaks(no_dupes2) # needs params???
+                    peaks2, _ = find_peaks(no_dupes2) # returns 0, 1 or 2 indices
                     print(peaks2, no_dupes2[peaks2]) # REMEMBER TO REMOVE
 
                     peaks2 = [-1 * x for x in peaks2]
@@ -183,7 +183,7 @@ def level_detector():
 
             no_dupes2.clear()
         bar_window.clear()
-        
+
         for i in range(len(support)):
             for j in range(len(support)):
                 if (support[i] + stdevs[coin][1]) >= support[j] > support[i]:
