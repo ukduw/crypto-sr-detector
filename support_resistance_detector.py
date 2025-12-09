@@ -181,7 +181,6 @@ def level_detector():
         all_levels[coin] = all_levels[coin] + support
 
     print("ALL LEVELS", all_levels)
-    # no longer returning np.int64()'s - this problem was probably from groupby()
     # currently returning indices from find_peaks
         # be aware that some return NO index or MULTIPLE indices
         # needs if empty logic to avoid errors
