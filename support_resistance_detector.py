@@ -132,7 +132,7 @@ def level_detector():
                 #no_dupes = [key for key, _ in groupby(bar_window)]
                 if len(no_dupes) >= 3:
                     peaks, _ = find_peaks(no_dupes) # needs params???
-                    print(peaks) # REMEMBER TO REMOVE
+                    print(peaks, no_dupes[peaks]) # REMEMBER TO REMOVE
                     unique_peaks = np.unique(peaks)
                     print(unique_peaks) # REMEMBER TO REMOVE
                     #peaks = [key for key, _ in groupby(peaks)]
@@ -163,7 +163,7 @@ def level_detector():
                 #no_dupes2 = [key for key, _ in groupby(bar_window)]
                 if len(no_dupes2) >= 3:
                     peaks2, _ = find_peaks(no_dupes2) # needs params???
-                    print(peaks2) # REMEMBER TO REMOVE
+                    print(peaks2, no_dupes2[peaks2]) # REMEMBER TO REMOVE
                     peaks2 = [-1 * x for x in peaks2]
                     print(peaks2) # REMEMBER TO REMOVE
                     unique_peaks2 = np.unique(peaks2)
