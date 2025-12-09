@@ -166,7 +166,6 @@ def level_detector():
                     print(unique_peaks2) # REMEMBER TO REMOVE
                     support.append(unique_peaks2)
                 else:
-                    #no_dupes2 = [-1 * x for x in no_dupes2]
                     inverse_sup = max(no_dupes2)
                     print(-1 * inverse_sup)
                     support.append(-1 * inverse_sup)
