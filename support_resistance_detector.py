@@ -180,6 +180,7 @@ def level_detector():
             no_dupes2.clear()
 
         unique_peaks2 = np.unique(sup_with_dupes)
+        print(unique_peaks2)
         support.append(unique_peaks2)
 
         bar_window.clear()
