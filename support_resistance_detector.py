@@ -200,11 +200,6 @@ def level_detector():
         all_levels[coin] = all_levels[coin] + support
 
     print("ALL LEVELS", all_levels)
-    # currently returning indices from find_peaks
-        # be aware that some return NO index or MULTIPLE indices
-        # needs if empty logic to avoid errors
-            # also needs multi-index logic...
-        # find_peaks returns ndarray 
 
     # PLOT - REMOVE LATER
     for coin in all_levels:
