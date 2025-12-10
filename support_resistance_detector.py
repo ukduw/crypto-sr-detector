@@ -130,23 +130,16 @@ def level_detector():
                         no_dupes.append(lvl)
                 if len(no_dupes) >= 3:
                     peaks, _ = find_peaks(no_dupes) # returns 0, 1 or 2 indices
-                    print(peaks) # REMEMBER TO REMOVE
                     
                     if len(peaks) > 0:
                         for i in peaks:
                             res_with_dupes.append(no_dupes[i])
-                            print(no_dupes[i]) # REMEMBER TO REMOVE
                 else:
                     res_with_dupes.append(max(no_dupes))
-
-            print(bar_window) # REMEMBER TO REMOVE
-            print(no_dupes) # REMEMBER TO REMOVE
-            print(res_with_dupes) # REMEMBER TO REMOVE
 
             no_dupes.clear()
 
         unique_peaks = np.unique(res_with_dupes)
-        print(unique_peaks) # REMEMBER TO REMOVE
         resistance.append(unique_peaks)
 
         bar_window.clear()
@@ -171,12 +164,10 @@ def level_detector():
                         no_dupes2.append(lvl2)
                 if len(no_dupes2) >= 3:
                     peaks2, _ = find_peaks(no_dupes2) # returns 0, 1 or 2 indices
-                    print(peaks2) # REMEMBER TO REMOVE
 
                     if len(peaks2) > 0:
                         for i in peaks2:
                             sup_with_dupes.append(-1 * no_dupes2[i])
-                            print(no_dupes[i]) # REMEMBER TO REMOVE
                 else:
                     inverse_sup = max(no_dupes2)
                     print(-1 * inverse_sup)
@@ -189,7 +180,6 @@ def level_detector():
             no_dupes2.clear()
 
         unique_peaks2 = np.unique(sup_with_dupes)
-        print(unique_peaks2) # REMEMBER TO REMOVE
         support.append(unique_peaks2)
 
         bar_window.clear()
