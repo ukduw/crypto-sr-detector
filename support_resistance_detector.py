@@ -123,6 +123,8 @@ def level_detector():
     for coin in highs:
         resistance = []
         no_dupes = []
+        res_with_dupes = []
+
         for high in highs[coin]:
             bar_window.append(high)
             if len(bar_window) == 6:
@@ -133,17 +135,22 @@ def level_detector():
                     peaks, _ = find_peaks(no_dupes) # returns 0, 1 or 2 indices
                     print(peaks, no_dupes[peaks]) # REMEMBER TO REMOVE
                     
-                    unique_peaks = np.unique(peaks)
-                    print(unique_peaks) # REMEMBER TO REMOVE
-
-                    resistance.append(unique_peaks)
+                    if len(peaks) > 0:
+                        for i in peaks:
+                            res_with_dupes.append(no_dupes[i])
                 else:
-                    resistance.append(max(no_dupes))
+                    res_with_dupes.append(max(no_dupes))
 
             print(bar_window) # REMEMBER TO REMOVE
             print(no_dupes) # REMEMBER TO REMOVE
+            print(res_with_dupes) # REMEMBER TO REMOVE
 
             no_dupes.clear()
+
+        unique_peaks = np.unique(res_with_dupes)
+        print(unique_peaks) # REMEMBER TO REMOVE
+        resistance.append(unique_peaks)
+
         bar_window.clear()
 
         for i in range(len(resistance)):
@@ -195,6 +202,8 @@ def level_detector():
     # currently returning indices from find_peaks
         # be aware that some return NO index or MULTIPLE indices
         # needs if empty logic to avoid errors
+            # also needs multi-index logic...
+        # find_peaks returns ndarray 
 
     # PLOT - REMOVE LATER
     for coin in all_levels:
