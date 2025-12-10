@@ -139,7 +139,7 @@ def level_detector():
             no_dupes.clear()
 
         resistance = np.unique(resistance)
-        print(resistance)
+        print("RESISTANCE", resistance)
 
         bar_window.clear()
 
@@ -168,17 +168,17 @@ def level_detector():
                             support.append(-1 * no_dupes2[i])
                 else:
                     inverse_sup = max(no_dupes2)
-                    print(-1 * inverse_sup)
+                    print("positive sup", -1 * inverse_sup)
                     support.append(-1 * inverse_sup)
 
-            print(bar_window) # REMEMBER TO REMOVE
-            print(no_dupes2) # REMEMBER TO REMOVE
-            print(support) # REMEMBER TO REMOVE
+            print("BAR WINDOW", bar_window) # REMEMBER TO REMOVE
+            print("NO_DUPES2", no_dupes2) # REMEMBER TO REMOVE
+            print("SUPPORT", support) # REMEMBER TO REMOVE
 
             no_dupes2.clear()
 
         support = np.unique(support)
-        print(support)
+        print("UNIQUE SUPPORT", support)
 
         bar_window.clear()
 
