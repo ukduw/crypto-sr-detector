@@ -120,7 +120,6 @@ def level_detector():
     for coin in highs:
         resistance = []
         no_dupes = []
-        res_with_dupes = []
 
         for high in highs[coin]:
             bar_window.append(high)
@@ -133,14 +132,14 @@ def level_detector():
                     
                     if len(peaks) > 0:
                         for i in peaks:
-                            res_with_dupes.append(no_dupes[i])
+                            resistance.append(no_dupes[i])
                 else:
-                    res_with_dupes.append(max(no_dupes))
+                    resistance.append(max(no_dupes))
 
             no_dupes.clear()
 
-        unique_peaks = np.unique(res_with_dupes)
-        resistance.append(unique_peaks)
+        resistance = np.unique(resistance)
+        print(resistance)
 
         bar_window.clear()
 
