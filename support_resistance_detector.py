@@ -114,6 +114,8 @@ def level_detector():
 
     # === S/R DETECT, MERGE LEVELS === #
     # the if (resistance[i] - stdevs[coin][0]) <= resistance[j] < resistance[i] line isn't working now
+        # because of 0-2 indices being returned
+        # if fixed, remove these notes
 
     for coin in highs:
         resistance = []
