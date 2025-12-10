@@ -153,7 +153,6 @@ def level_detector():
     for coin in lows:
         support = []
         no_dupes2 = []
-        sup_with_dupes = []
 
         for low in lows[coin]:
             bar_window.append(low * -1)
@@ -166,21 +165,20 @@ def level_detector():
 
                     if len(peaks2) > 0:
                         for i in peaks2:
-                            sup_with_dupes.append(-1 * no_dupes2[i])
+                            support.append(-1 * no_dupes2[i])
                 else:
                     inverse_sup = max(no_dupes2)
                     print(-1 * inverse_sup)
-                    sup_with_dupes.append(-1 * inverse_sup)
+                    support.append(-1 * inverse_sup)
 
             print(bar_window) # REMEMBER TO REMOVE
             print(no_dupes2) # REMEMBER TO REMOVE
-            print(sup_with_dupes) # REMEMBER TO REMOVE
+            print(support) # REMEMBER TO REMOVE
 
             no_dupes2.clear()
 
-        unique_peaks2 = np.unique(sup_with_dupes)
-        print(unique_peaks2)
-        support.append(unique_peaks2)
+        support = np.unique(support)
+        print(support)
 
         bar_window.clear()
 
