@@ -130,11 +130,12 @@ def level_detector():
                         no_dupes.append(lvl)
                 if len(no_dupes) >= 3:
                     peaks, _ = find_peaks(no_dupes) # returns 0, 1 or 2 indices
-                    print(peaks, no_dupes[peaks]) # REMEMBER TO REMOVE
+                    print(peaks) # REMEMBER TO REMOVE
                     
                     if len(peaks) > 0:
                         for i in peaks:
                             res_with_dupes.append(no_dupes[i])
+                            print(no_dupes[i]) # REMEMBER TO REMOVE
                 else:
                     res_with_dupes.append(max(no_dupes))
 
@@ -170,11 +171,12 @@ def level_detector():
                         no_dupes2.append(lvl2)
                 if len(no_dupes2) >= 3:
                     peaks2, _ = find_peaks(no_dupes2) # returns 0, 1 or 2 indices
-                    print(peaks2, no_dupes2[peaks2]) # REMEMBER TO REMOVE
+                    print(peaks2) # REMEMBER TO REMOVE
 
                     if len(peaks2) > 0:
                         for i in peaks2:
                             sup_with_dupes.append(-1 * no_dupes2[i])
+                            print(no_dupes[i]) # REMEMBER TO REMOVE
                 else:
                     inverse_sup = max(no_dupes2)
                     print(-1 * inverse_sup)
