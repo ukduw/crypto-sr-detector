@@ -146,7 +146,7 @@ def level_detector():
 
         for i in range(len(resistance)):
             for j in range(len(resistance)):
-                if (resistance[i] - stdevs[coin][0]) <= resistance[j] < resistance[i]:
+                if (resistance[i] - stdevs[coin][0]) <= resistance[j] < resistance[i]: # ERROR: ValueError: the truth value of an array with more than one element is ambiguous. use a.any() or a.all()
                     print("KEPT", resistance[i], "DELETED", resistance[j]) # REMEMBER TO REMOVE
                     resistance.pop(j)
         all_levels[coin] = resistance
