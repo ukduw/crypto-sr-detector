@@ -9,7 +9,6 @@ import datetime, pytz, statistics
 import numpy as np
 
 from collections import deque
-from itertools import groupby, chain
 from scipy.signal import find_peaks
 
 import matplotlib.pyplot as plt
