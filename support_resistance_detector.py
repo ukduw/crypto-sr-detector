@@ -30,9 +30,6 @@ import matplotlib.pyplot as plt
     # consider getting rid of "upper-mid" altogether
     # "mid" are less volatile/have less range, but DO NOT TRACK, so are actually more valuable
 
-# UNACCOUNTED FOR: 3 [SUSHI, TRUMP, USDG] 
-    # REDO
-
 
 # 1. determine level parameters (and take-profit conditions for bot script)
 # 2. test, tweak parameters, remove prints/plots/comments
