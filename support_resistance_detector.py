@@ -106,6 +106,7 @@ def level_detector():
         lows_stdev = statistics.stdev(lows[coin])
 
         stdevs[coin] = [highs_stdev, lows_stdev]
+        print("STDEVS", stdevs) # REMEMBER TO REMOVE
 
 
     # === S/R DETECT, MERGE LEVELS === #
@@ -136,6 +137,7 @@ def level_detector():
 
         resistance = np.unique(resistance)
         print("RESISTANCE", resistance)
+            # printed correctly; keep for now to compare both lists to final output (after stdev operations)
 
         bar_window.clear()
 
