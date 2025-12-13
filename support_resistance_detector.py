@@ -189,7 +189,7 @@ def level_detector():
 
     print("ALL LEVELS", all_levels)
         # between ALL LEVELS and PARAMETERS + LEVELS, something goes wrong
-        # the same level is appended to everything
+        # the very first level is appended to everything
 
     # === STRATEGY PARAMETERS === #
         # TWEAK THIS - needs more research...
