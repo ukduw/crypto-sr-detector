@@ -132,8 +132,6 @@ def level_detector():
             no_dupes.clear()
 
         resistance = np.unique(resistance).tolist()
-        print("RESISTANCE", resistance)
-            # printed correctly; keep for now to compare both lists to final output (after stdev operations)
 
         bar_window.clear()
 
@@ -172,15 +170,9 @@ def level_detector():
                     print("positive sup", -1 * inverse_sup)
                     support.append(-1 * inverse_sup)
 
-            print("BAR WINDOW", bar_window) # REMEMBER TO REMOVE
-            print("NO_DUPES2", no_dupes2) # REMEMBER TO REMOVE
-            print("SUPPORT", support) # REMEMBER TO REMOVE
-
             no_dupes2.clear()
 
         support = np.unique(support).tolist()
-        print("UNIQUE SUPPORT", support)
-            # keep to compare; remove if working as intended
 
         bar_window.clear()
 
