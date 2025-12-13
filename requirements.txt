@@ -8,7 +8,6 @@ dotenv==0.9.9
 fonttools==4.60.1
 idna==3.11
 kiwisolver==1.4.9
-matplotlib==3.10.7
 msgpack==1.1.2
 numpy==2.3.3
 packaging==25.0
@@ -17,9 +16,6 @@ pillow==11.3.0
 pydantic==2.12.2
 pydantic_core==2.41.4
 pyparsing==3.2.5
-PyQt6==6.10.1
-PyQt6-Qt6==6.10.1
-PyQt6_sip==13.10.3
 python-dateutil==2.9.0.post0
 python-dotenv==1.1.1
 pytz==2025.2
