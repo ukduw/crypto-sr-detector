@@ -134,18 +134,24 @@ def level_detector():
 
         bar_window.clear()
 
-        indices_to_remove = []
-        for i in range(len(resistance)):
-            for j in range(len(resistance)):
-                if resistance[j] < resistance[i] and resistance[j] >= (resistance[i] - stdevs[coin][0]/2):
-                    if j not in indices_to_remove:
-                        indices_to_remove.append(j)
-        print(f"{coin} - INDICES TO REMOVE (resistance)", indices_to_remove) # REMEMBER TO REMOVE
-        for i in sorted(indices_to_remove, reverse=True):
-            resistance.pop(i)
+        res_values = sorted(resistance, reverse=True)
+        res_kept = []
+        for v in res_values:
+            if not any(0 < k - v <= stdevs[coin][0] for k in res_kept):
+                res_kept.append(v)
+
+        #indices_to_remove = []
+        #for i in range(len(resistance)):
+        #    for j in range(len(resistance)):
+        #        if resistance[j] < resistance[i] and resistance[j] >= (resistance[i] - stdevs[coin][0]):
+        #            if j not in indices_to_remove:
+        #                indices_to_remove.append(j)
+        #print(f"{coin} - INDICES TO REMOVE (resistance)", indices_to_remove) # REMEMBER TO REMOVE
+        #for i in sorted(indices_to_remove, reverse=True):
+        #    resistance.pop(i)
         
-        print(f"{coin} - RESISTANCE (post stdev)", resistance) # REMEMBER TO REMOVE
-        all_levels[coin] = resistance
+        print(f"{coin} - RESISTANCE (post stdev)", res_kept) # REMEMBER TO REMOVE
+        all_levels[coin] = res_kept
     
     for coin in lows:
         support = []
@@ -177,7 +183,7 @@ def level_detector():
         indices_to_remove2 = []
         for i in range(len(support)):
             for j in range(len(support)):
-                if support[j] > support[i] and support[j] <= (support[i] + stdevs[coin][1]/2):
+                if support[j] > support[i] and support[j] <= (support[i] + stdevs[coin][1]):
                     if j not in indices_to_remove2:
                         indices_to_remove2.append(j)
         print(f"{coin} - INDICES TO REMOVE (support)", indices_to_remove2) # REMEMBER TO REMOVE
