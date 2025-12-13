@@ -139,16 +139,6 @@ def level_detector():
         for v in res_values:
             if not any(0 < k - v <= stdevs[coin][0] for k in res_kept):
                 res_kept.append(v)
-
-        #indices_to_remove = []
-        #for i in range(len(resistance)):
-        #    for j in range(len(resistance)):
-        #        if resistance[j] < resistance[i] and resistance[j] >= (resistance[i] - stdevs[coin][0]):
-        #            if j not in indices_to_remove:
-        #                indices_to_remove.append(j)
-        #print(f"{coin} - INDICES TO REMOVE (resistance)", indices_to_remove) # REMEMBER TO REMOVE
-        #for i in sorted(indices_to_remove, reverse=True):
-        #    resistance.pop(i)
         
         print(f"{coin} - RESISTANCE (post stdev)", res_kept) # REMEMBER TO REMOVE
         all_levels[coin] = res_kept
@@ -185,16 +175,6 @@ def level_detector():
         for v in sup_values:
             if not any(0 < v - k <= stdevs[coin][1] for k in sup_kept):
                 sup_kept.append(v)
-
-        #indices_to_remove2 = []
-        #for i in range(len(support)):
-        #    for j in range(len(support)):
-        #        if support[j] > support[i] and support[j] <= (support[i] + stdevs[coin][1]):
-        #            if j not in indices_to_remove2:
-        #                indices_to_remove2.append(j)
-        #print(f"{coin} - INDICES TO REMOVE (support)", indices_to_remove2) # REMEMBER TO REMOVE
-        #for i in sorted(indices_to_remove2, reverse=True):
-        #    support.pop(i)
 
         print(f"{coin} - SUPPORT (post stdev)", sup_kept) # REMEMBER TO REMOVE
         all_levels[coin] = all_levels[coin] + sup_kept
