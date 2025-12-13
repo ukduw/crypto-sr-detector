@@ -165,7 +165,6 @@ def level_detector():
                             support.append(-1 * no_dupes2[i])
                 else:
                     inverse_sup = max(no_dupes2)
-                    print("positive sup", -1 * inverse_sup)
                     support.append(-1 * inverse_sup)
 
             no_dupes2.clear()
