@@ -147,7 +147,7 @@ def level_detector():
         for i in sorted(indices_to_remove, reverse=True):
             resistance.pop(i)
         
-        print("RESISTANCE (post stdev)", resistance)
+        print("RESISTANCE (post stdev)", resistance) # REMEMBER TO REMOVE
         all_levels[coin] = resistance
     
     for coin in lows:
@@ -179,6 +179,7 @@ def level_detector():
 
         support = np.unique(support).tolist()
         print("UNIQUE SUPPORT", support)
+            # keep to compare; remove if working as intended
 
         bar_window.clear()
 
@@ -192,7 +193,7 @@ def level_detector():
         for i in sorted(indices_to_remove2, reverse=True):
             support.pop(i)
 
-        print("SUPPORT (post stdev)", support)
+        print("SUPPORT (post stdev)", support) # REMEMBER TO REMOVE
         all_levels[coin] = all_levels[coin] + support
 
     print("ALL LEVELS", all_levels)
