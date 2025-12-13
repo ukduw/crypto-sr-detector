@@ -131,7 +131,7 @@ def level_detector():
 
             no_dupes.clear()
 
-        resistance = np.unique(resistance)
+        resistance = np.unique(resistance).tolist()
         print("RESISTANCE", resistance)
             # printed correctly; keep for now to compare both lists to final output (after stdev operations)
 
@@ -171,7 +171,7 @@ def level_detector():
 
             no_dupes2.clear()
 
-        support = np.unique(support)
+        support = np.unique(support).tolist()
         print("UNIQUE SUPPORT", support)
 
         bar_window.clear()
