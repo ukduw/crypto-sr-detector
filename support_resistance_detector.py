@@ -11,8 +11,6 @@ import numpy as np
 from collections import deque
 from scipy.signal import find_peaks
 
-import matplotlib.pyplot as plt
-
 
 # subscribe as currency pair, e.g. "BTCUSD"
     # updated to "BTC/USD", but legacy version above is still backwards compatible...
@@ -191,17 +189,6 @@ def level_detector():
         all_levels[coin] = all_levels[coin] + support
 
     print("ALL LEVELS", all_levels)
-
-    # PLOT - REMOVE LATER
-    for coin in all_levels:
-        plt.plot(highs[coin], lows[coin])
-        plt.plot(all_levels[coin], "rx")
-        plt.show()
-    # NOT WORKING - "FigureCanvasAgg is non-interactive and thus cannot be shown    plt.show()"
-    # CAN do it manually...
-    # can try uninstalling/re-installing matplotlib; problem may also be newer python version needs (pip install) PyQt6
-        # remember to uninstall (and remove from requirements) PyQt6 after plotting/testing; not needed in finished version
-
 
     # === STRATEGY PARAMETERS === #
         # TWEAK THIS - needs more research...
