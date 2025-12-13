@@ -182,14 +182,18 @@ def level_detector():
 
         bar_window.clear()
 
-        trimmed_support = support
+        indices_to_remove2 = []
         for i in range(len(support)):
             for j in range(len(support)):
                 if (support[i] + stdevs[coin][1]) >= support[j] > support[i]:
                     print("KEPT", support[i], "DELETED", support[j]) # REMEMBER TO REMOVE
-                    trimmed_support.pop[j]
-        print(trimmed_support) # REMEMBER TO REMOVE
-        all_levels[coin] = all_levels[coin] + trimmed_support
+                    indices_to_remove2.append(j)
+        print("INDICES TO REMOVE (support)", indices_to_remove2) # REMEMBER TO REMOVE
+        for i in sorted(indices_to_remove2, reverse=True):
+            support.pop(i)
+
+        print("SUPPORT (post stdev)", support)
+        all_levels[coin] = all_levels[coin] + support
 
     print("ALL LEVELS", all_levels)
 
