@@ -137,14 +137,18 @@ def level_detector():
 
         bar_window.clear()
 
-        trimmed_resistance = resistance
+        indices_to_remove = []
         for i in range(len(resistance)):
             for j in range(len(resistance)):
                 if (resistance[i] - stdevs[coin][0]) <= resistance[j] < resistance[i]:
                     print("KEPT", resistance[i], "DELETED", resistance[j]) # REMEMBER TO REMOVE
-                    trimmed_resistance.pop(j)
-        print(trimmed_resistance) # REMEMBER TO REMOVE
-        all_levels[coin] = trimmed_resistance
+                    indices_to_remove.append(j)
+        print("INDICES TO REMOVE (resistance)", indices_to_remove) # REMEMBER TO REMOVE
+        for i in sorted(indices_to_remove, reverse=True):
+            resistance.pop(i)
+        
+        print("RESISTANCE (post stdev)", resistance)
+        all_levels[coin] = resistance
     
     for coin in lows:
         support = []
