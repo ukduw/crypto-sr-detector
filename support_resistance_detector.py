@@ -104,7 +104,7 @@ def level_detector():
         lows_stdev = statistics.stdev(lows[coin])
 
         stdevs[coin] = [highs_stdev, lows_stdev]
-        print("STDEVS", stdevs) # REMEMBER TO REMOVE
+    print("STDEVS", stdevs) # REMEMBER TO REMOVE
 
 
     # === S/R DETECT, MERGE LEVELS === #
