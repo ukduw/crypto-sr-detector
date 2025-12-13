@@ -130,6 +130,7 @@ def level_detector():
             no_dupes.clear()
 
         resistance = np.unique(resistance).tolist()
+        print(f"{coin} - RESISTANCE", resistance)
 
         bar_window.clear()
 
@@ -138,7 +139,6 @@ def level_detector():
             for j in range(len(resistance)):
                 if resistance[j] < resistance[i] and resistance[j] >= (resistance[i] - stdevs[coin][0]/2):
                     if j not in indices_to_remove:
-                        #print("KEPT", resistance[i], "DELETED", resistance[j]) # REMEMBER TO REMOVE
                         indices_to_remove.append(j)
         print(f"{coin} - INDICES TO REMOVE (resistance)", indices_to_remove) # REMEMBER TO REMOVE
         for i in sorted(indices_to_remove, reverse=True):
@@ -170,6 +170,7 @@ def level_detector():
             no_dupes2.clear()
 
         support = np.unique(support).tolist()
+        print(f"{coin} - SUPPORT", support)
 
         bar_window.clear()
 
@@ -178,7 +179,6 @@ def level_detector():
             for j in range(len(support)):
                 if support[j] > support[i] and support[j] <= (support[i] + stdevs[coin][1]/2):
                     if j not in indices_to_remove2:
-                        #print("KEPT", support[i], "DELETED", support[j]) # REMEMBER TO REMOVE
                         indices_to_remove2.append(j)
         print(f"{coin} - INDICES TO REMOVE (support)", indices_to_remove2) # REMEMBER TO REMOVE
         for i in sorted(indices_to_remove2, reverse=True):
