@@ -141,7 +141,7 @@ def level_detector():
             for j in range(len(resistance)):
                 if (resistance[i] - stdevs[coin][0]) <= resistance[j] < resistance[i]:
                     print("KEPT", resistance[i], "DELETED", resistance[j]) # REMEMBER TO REMOVE
-                    resistance.pop(j) # .pop() doesn't exist on np.ndarray
+                    resistance.pop(j)
         all_levels[coin] = resistance
     
     for coin in lows:
