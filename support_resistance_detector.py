@@ -136,15 +136,15 @@ def level_detector():
         indices_to_remove = []
         for i in range(len(resistance)):
             for j in range(len(resistance)):
-                if resistance[j] < resistance[i] and resistance[j] >= (resistance[i] - stdevs[coin][0]):
+                if resistance[j] < resistance[i] and resistance[j] >= (resistance[i] - stdevs[coin][0]/2):
                     if j not in indices_to_remove:
-                        print("KEPT", resistance[i], "DELETED", resistance[j]) # REMEMBER TO REMOVE
+                        #print("KEPT", resistance[i], "DELETED", resistance[j]) # REMEMBER TO REMOVE
                         indices_to_remove.append(j)
-        print("INDICES TO REMOVE (resistance)", indices_to_remove) # REMEMBER TO REMOVE
+        print(f"{coin} - INDICES TO REMOVE (resistance)", indices_to_remove) # REMEMBER TO REMOVE
         for i in sorted(indices_to_remove, reverse=True):
             resistance.pop(i)
         
-        print("RESISTANCE (post stdev)", resistance) # REMEMBER TO REMOVE
+        print(f"{coin} - RESISTANCE (post stdev)", resistance) # REMEMBER TO REMOVE
         all_levels[coin] = resistance
     
     for coin in lows:
@@ -177,18 +177,20 @@ def level_detector():
         indices_to_remove2 = []
         for i in range(len(support)):
             for j in range(len(support)):
-                if support[j] > support[i] and support[j] <= (support[i] + stdevs[coin][1]):
+                if support[j] > support[i] and support[j] <= (support[i] + stdevs[coin][1]/2):
                     if j not in indices_to_remove2:
-                        print("KEPT", support[i], "DELETED", support[j]) # REMEMBER TO REMOVE
+                        #print("KEPT", support[i], "DELETED", support[j]) # REMEMBER TO REMOVE
                         indices_to_remove2.append(j)
-        print("INDICES TO REMOVE (support)", indices_to_remove2) # REMEMBER TO REMOVE
+        print(f"{coin} - INDICES TO REMOVE (support)", indices_to_remove2) # REMEMBER TO REMOVE
         for i in sorted(indices_to_remove2, reverse=True):
             support.pop(i)
 
-        print("SUPPORT (post stdev)", support) # REMEMBER TO REMOVE
+        print(f"{coin} - SUPPORT (post stdev)", support) # REMEMBER TO REMOVE
         all_levels[coin] = all_levels[coin] + support
 
     print("ALL LEVELS", all_levels)
+        # between ALL LEVELS and PARAMETERS + LEVELS, something goes wrong
+        # the same level is appended to everything
 
     # === STRATEGY PARAMETERS === #
         # TWEAK THIS - needs more research...
