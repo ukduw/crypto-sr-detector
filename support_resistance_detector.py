@@ -110,10 +110,6 @@ def level_detector():
 
 
     # === S/R DETECT, MERGE LEVELS === #
-    # the if (resistance[i] - stdevs[coin][0]) <= resistance[j] < resistance[i] line isn't working now
-        # because of 0-2 indices being returned
-        # if fixed, remove these notes
-
     for coin in highs:
         resistance = []
         no_dupes = []
@@ -143,9 +139,9 @@ def level_detector():
 
         for i in range(len(resistance)):
             for j in range(len(resistance)):
-                if (resistance[i] - stdevs[coin][0]) <= resistance[j] < resistance[i]: # ERROR: ValueError: the truth value of an array with more than one element is ambiguous. use a.any() or a.all()
+                if (resistance[i] - stdevs[coin][0]) <= resistance[j] < resistance[i]:
                     print("KEPT", resistance[i], "DELETED", resistance[j]) # REMEMBER TO REMOVE
-                    resistance.pop(j)
+                    resistance.pop(j) # .pop() doesn't exist on np.ndarray
         all_levels[coin] = resistance
     
     for coin in lows:
