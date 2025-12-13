@@ -180,7 +180,7 @@ def level_detector():
 
         bar_window.clear()
 
-        sup_values = sorted(resistance, reverse=False)
+        sup_values = sorted(support, reverse=False)
         sup_kept = []
         for v in sup_values:
             if not any(0 < v - k <= stdevs[coin][1] for k in sup_kept):
