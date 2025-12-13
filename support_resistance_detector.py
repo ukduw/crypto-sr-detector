@@ -137,12 +137,14 @@ def level_detector():
 
         bar_window.clear()
 
+        trimmed_resistance = resistance
         for i in range(len(resistance)):
             for j in range(len(resistance)):
                 if (resistance[i] - stdevs[coin][0]) <= resistance[j] < resistance[i]:
                     print("KEPT", resistance[i], "DELETED", resistance[j]) # REMEMBER TO REMOVE
-                    resistance.pop(j)
-        all_levels[coin] = resistance
+                    trimmed_resistance.pop(j)
+        print(trimmed_resistance) # REMEMBER TO REMOVE
+        all_levels[coin] = trimmed_resistance
     
     for coin in lows:
         support = []
