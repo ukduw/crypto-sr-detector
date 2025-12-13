@@ -180,18 +180,24 @@ def level_detector():
 
         bar_window.clear()
 
-        indices_to_remove2 = []
-        for i in range(len(support)):
-            for j in range(len(support)):
-                if support[j] > support[i] and support[j] <= (support[i] + stdevs[coin][1]):
-                    if j not in indices_to_remove2:
-                        indices_to_remove2.append(j)
-        print(f"{coin} - INDICES TO REMOVE (support)", indices_to_remove2) # REMEMBER TO REMOVE
-        for i in sorted(indices_to_remove2, reverse=True):
-            support.pop(i)
+        sup_values = sorted(resistance, reverse=False)
+        sup_kept = []
+        for v in sup_values:
+            if not any(0 < v - k <= stdevs[coin][1] for k in sup_kept):
+                sup_kept.append(v)
 
-        print(f"{coin} - SUPPORT (post stdev)", support) # REMEMBER TO REMOVE
-        all_levels[coin] = all_levels[coin] + support
+        #indices_to_remove2 = []
+        #for i in range(len(support)):
+        #    for j in range(len(support)):
+        #        if support[j] > support[i] and support[j] <= (support[i] + stdevs[coin][1]):
+        #            if j not in indices_to_remove2:
+        #                indices_to_remove2.append(j)
+        #print(f"{coin} - INDICES TO REMOVE (support)", indices_to_remove2) # REMEMBER TO REMOVE
+        #for i in sorted(indices_to_remove2, reverse=True):
+        #    support.pop(i)
+
+        print(f"{coin} - SUPPORT (post stdev)", sup_kept) # REMEMBER TO REMOVE
+        all_levels[coin] = all_levels[coin] + sup_kept
 
     print("ALL LEVELS", all_levels)
         # between ALL LEVELS and PARAMETERS + LEVELS, something goes wrong
