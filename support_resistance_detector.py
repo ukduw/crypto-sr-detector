@@ -178,12 +178,14 @@ def level_detector():
 
         bar_window.clear()
 
+        trimmed_support = support
         for i in range(len(support)):
             for j in range(len(support)):
                 if (support[i] + stdevs[coin][1]) >= support[j] > support[i]:
                     print("KEPT", support[i], "DELETED", support[j]) # REMEMBER TO REMOVE
-                    support.pop[j]
-        all_levels[coin] = all_levels[coin] + support
+                    trimmed_support.pop[j]
+        print(trimmed_support) # REMEMBER TO REMOVE
+        all_levels[coin] = all_levels[coin] + trimmed_support
 
     print("ALL LEVELS", all_levels)
 
