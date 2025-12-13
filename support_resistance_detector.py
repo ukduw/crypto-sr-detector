@@ -96,7 +96,7 @@ def level_detector():
             highs.setdefault(bar.symbol, []).append(bar.high)
             lows.setdefault(bar.symbol, []).append(bar.low)
         close[coin] = bars[-1].close
-
+        # NEEDS TO BE FILTERED FOR UNRELIABLE DATA, e.g. all data is x*e^-8... but 2 datapoints are x*e^-4
 
     # === STDEV === #
     for coin in highs:
@@ -108,6 +108,9 @@ def level_detector():
 
 
     # === S/R DETECT, MERGE LEVELS === #
+    # functioning
+    # make stdev filter more granular, so more detailed levels are preserved before next step...
+
     for coin in highs:
         resistance = []
         no_dupes = []
@@ -185,6 +188,9 @@ def level_detector():
 
     # === STRATEGY PARAMETERS === #
         # TWEAK THIS - needs more research...
+
+        # fix the "closest to close/entry * 1.005/0.995" logic...
+
     parameters = {}
 
     smallest_diff1 = 100
