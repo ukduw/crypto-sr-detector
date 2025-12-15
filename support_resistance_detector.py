@@ -231,6 +231,8 @@ def level_detector():
         parameters[coin] = [entry, stop]
     
     print("PARAMETERS", parameters)
+        # common for the same level to be assigned to both entry and stop
+        # needs logic to pop entry after its assignment, so the next closest level can be assigned to stop
 
     levels["parameters"] = parameters
     levels["dollar_value"] = dollar_position_size
