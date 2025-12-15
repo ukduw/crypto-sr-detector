@@ -107,8 +107,8 @@ def level_detector():
             filtered_highs = np_highs[np.abs(z_score_highs) < 3] # > or < 3 zscore is standard; could increase
             filtered_lows = np_lows[np.abs(z_score_lows) < 3]
 
-            highs = filtered_highs.tolist()
-            lows = filtered_lows.tolist()
+            highs[coin] = filtered_highs.tolist()
+            lows[coin] = filtered_lows.tolist()
 
         close[coin] = bars[-1].close
             # what if last bar's close is unreliable...? UGH
