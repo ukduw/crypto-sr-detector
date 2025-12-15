@@ -205,7 +205,7 @@ def level_detector():
         print(all_levels[coin])
         
         entry = min(all_levels[coin], key=lambda x: abs(x - close[coin] * 1.005))
-        stop = 0 # placeholder
+        stop = min(all_levels[coin], key=lambda x: abs(x - entry * 0.995))
         
         #for level in all_levels[coin]:
 
