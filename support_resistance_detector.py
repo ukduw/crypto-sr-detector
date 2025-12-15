@@ -10,6 +10,7 @@ import numpy as np
 
 from collections import deque
 from scipy.signal import find_peaks
+from scipy.stats import zscore
 
 
 # subscribe as currency pair, e.g. "BTCUSD"
@@ -95,8 +96,23 @@ def level_detector():
         for bar in bars:
             highs.setdefault(bar.symbol, []).append(bar.high)
             lows.setdefault(bar.symbol, []).append(bar.low)
+
+        for coin in highs:
+            np_highs = np.array(highs[coin])
+            np_lows = np.array(lows[coin])
+            
+            z_score_highs = zscore(np_highs)
+            z_score_lows = zscore(np_lows)
+
+            filtered_highs = np_highs[np.abs(z_score_highs) < 3] # > or < 3 zscore is standard; could increase
+            filtered_lows = np_lows[np.abs(z_score_lows) < 3]
+
+            highs = filtered_highs.tolist()
+            lows = filtered_lows.tolist()
+
         close[coin] = bars[-1].close
-        # NEEDS TO BE FILTERED FOR UNRELIABLE DATA, e.g. all data is x*e^-8... but 2 datapoints are x*e^-4
+            # what if last bar's close is unreliable...? UGH
+
 
     # === STDEV === #
     for coin in highs:
@@ -107,10 +123,8 @@ def level_detector():
 
 
     # === S/R DETECT, MERGE LEVELS === #
-    # functioning
     # make stdev filter more granular, so more detailed levels are preserved before next step...
         # test more, tweak stdev/x
-
     for coin in highs:
         resistance = []
         no_dupes = []
