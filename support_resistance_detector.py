@@ -140,7 +140,7 @@ def level_detector():
         res_values = sorted(resistance, reverse=True)
         res_kept = []
         for v in res_values:
-            if not any(0 < k - v <= stdevs[coin][0] for k in res_kept):
+            if not any(0 < k - v <= stdevs[coin][0]/2 for k in res_kept):
                 res_kept.append(v)
         
         print(f"{coin} - RESISTANCE (post stdev)", res_kept) # REMEMBER TO REMOVE
@@ -176,7 +176,7 @@ def level_detector():
         sup_values = sorted(support, reverse=False)
         sup_kept = []
         for v in sup_values:
-            if not any(0 < v - k <= stdevs[coin][1] for k in sup_kept):
+            if not any(0 < v - k <= stdevs[coin][1]/2 for k in sup_kept):
                 sup_kept.append(v)
 
         print(f"{coin} - SUPPORT (post stdev)", sup_kept) # REMEMBER TO REMOVE
