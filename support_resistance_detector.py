@@ -147,7 +147,7 @@ def level_detector():
             no_dupes.clear()
 
         resistance = np.unique(resistance).tolist()
-        print(f"{coin} - RESISTANCE", resistance) # REMEMBER TO REMOVE
+        print(f"{coin} ({len(resistance)})) - RESISTANCE", resistance) # REMEMBER TO REMOVE
 
         bar_window.clear()
 
@@ -183,7 +183,7 @@ def level_detector():
             no_dupes2.clear()
 
         support = np.unique(support).tolist()
-        print(f"{coin} - SUPPORT", support) # REMEMBER TO REMOVE
+        print(f"{coin} ({len(support)}) - SUPPORT", support) # REMEMBER TO REMOVE
 
         bar_window.clear()
 
