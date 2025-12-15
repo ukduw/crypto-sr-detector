@@ -104,7 +104,6 @@ def level_detector():
         lows_stdev = statistics.stdev(lows[coin])
 
         stdevs[coin] = [highs_stdev, lows_stdev]
-    print("STDEVS", stdevs) # REMEMBER TO REMOVE
 
 
     # === S/R DETECT, MERGE LEVELS === #
@@ -134,7 +133,7 @@ def level_detector():
             no_dupes.clear()
 
         resistance = np.unique(resistance).tolist()
-        print(f"{coin} - RESISTANCE", resistance)
+        print(f"{coin} - RESISTANCE", resistance) # REMEMBER TO REMOVE
 
         bar_window.clear()
 
@@ -170,7 +169,7 @@ def level_detector():
             no_dupes2.clear()
 
         support = np.unique(support).tolist()
-        print(f"{coin} - SUPPORT", support)
+        print(f"{coin} - SUPPORT", support) # REMEMBER TO REMOVE
 
         bar_window.clear()
 
@@ -183,7 +182,7 @@ def level_detector():
         print(f"{coin} - SUPPORT (post stdev)", sup_kept) # REMEMBER TO REMOVE
         all_levels[coin] = all_levels[coin] + sup_kept
 
-    print("ALL LEVELS", all_levels)
+    print("ALL LEVELS", all_levels) # REMEMBER TO REMOVE
 
 
     # === STRATEGY PARAMETERS === #
@@ -191,8 +190,6 @@ def level_detector():
     parameters = {}
 
     for coin in all_levels:
-        print(all_levels[coin])
-        
         entry = min(all_levels[coin], key=lambda x: abs(x - close[coin] * 1.005))
         stop = min(all_levels[coin], key=lambda x: abs(x - entry * 0.995))
 
