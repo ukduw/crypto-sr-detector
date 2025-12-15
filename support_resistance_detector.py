@@ -190,6 +190,8 @@ def level_detector():
         # TWEAK THIS - needs more research...
 
         # fix the "closest to close/entry * 1.005/0.995" logic...
+        # could use this, for example: 
+            # min(values, key=lambda x: abs(x - target))
 
     parameters = {}
 
