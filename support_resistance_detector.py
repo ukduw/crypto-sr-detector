@@ -190,16 +190,18 @@ def level_detector():
     parameters = {}
 
     for coin in all_levels:
-        entry = min(all_levels[coin], key=lambda x: abs(x - close[coin] * 1.005))
+        entry = min(all_levels[coin], key=lambda x: abs(x - close[coin] * 1.005)) # 0.50% above close
         all_levels[coin].remove(entry)
 
-        stop = min(all_levels[coin], key=lambda x: abs(x - entry * 0.995))
+        stop = min(all_levels[coin], key=lambda x: abs(x - entry * 0.995)) # 0.50% below entry
 
         parameters[coin] = [entry, stop]
     
     print("PARAMETERS", parameters)
-        # common for the same level to be assigned to both entry and stop
-        # needs logic to pop entry after its assignment, so the next closest level can be assigned to stop
+        # fixed problem, but there's a small chance that the closest to entry * 0.995 is HIGHER than the entry...
+        # could also be a case where the stop is way too far below 0.50% for risk management
+            # 1. more granular levels could fix this...
+            # 2. needs logic for if no decent stop can be found; no play = exclude from levels dict
 
     levels["parameters"] = parameters
     levels["dollar_value"] = dollar_position_size
