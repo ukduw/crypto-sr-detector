@@ -110,6 +110,7 @@ def level_detector():
     # === S/R DETECT, MERGE LEVELS === #
     # functioning
     # make stdev filter more granular, so more detailed levels are preserved before next step...
+        # test more, tweak stdev/x
 
     for coin in highs:
         resistance = []
@@ -140,7 +141,7 @@ def level_detector():
         res_values = sorted(resistance, reverse=True)
         res_kept = []
         for v in res_values:
-            if not any(0 < k - v <= stdevs[coin][0]/2 for k in res_kept):
+            if not any(0 < k - v <= stdevs[coin][0]/2 for k in res_kept): # stdev/2 - NEEDS MORE TESTING...
                 res_kept.append(v)
         
         print(f"{coin} - RESISTANCE (post stdev)", res_kept) # REMEMBER TO REMOVE
@@ -176,14 +177,14 @@ def level_detector():
         sup_values = sorted(support, reverse=False)
         sup_kept = []
         for v in sup_values:
-            if not any(0 < v - k <= stdevs[coin][1]/2 for k in sup_kept):
+            if not any(0 < v - k <= stdevs[coin][1]/2 for k in sup_kept): # stdev/2 - NEEDS MORE TESTING...
                 sup_kept.append(v)
 
         print(f"{coin} - SUPPORT (post stdev)", sup_kept) # REMEMBER TO REMOVE
         all_levels[coin] = all_levels[coin] + sup_kept
 
     print("ALL LEVELS", all_levels)
-    
+
 
     # === STRATEGY PARAMETERS === #
         # TWEAK THIS - needs more research...
