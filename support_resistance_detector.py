@@ -92,7 +92,8 @@ def level_detector():
             # {'PEPE/USD': [ {'a': , 'b': , 'c': , ...}, {...}, ...] }
                 # { 'close': , 'high': , 'low': , 'open': , 'symbol': , 'timestamp': , 'trade_count': , 'volume': , 'vwap': }
         bars = bars_dict[coin] # list of dicts
-        
+        print(bars) # REMOVE LATER
+
         for bar in bars:
             highs.setdefault(bar.symbol, []).append(bar.high)
             lows.setdefault(bar.symbol, []).append(bar.low)
