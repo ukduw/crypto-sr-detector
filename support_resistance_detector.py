@@ -216,13 +216,11 @@ def level_detector():
         parameters[coin] = [entry, stop]
     
     print("PARAMETERS", parameters)
-        # could also be a case where the stop is way too far below 0.50% for risk management
-            # 1. more granular levels could fix this...
-            # 2. needs logic for if no decent stop can be found; no play = exclude from levels dict
 
     for coin in parameters:
         if parameters[coin][1] / parameters[coin][0] * 100 > 0.8: # stop / entry * 100 > 0.80% (TWEAK)
             del parameters[coin]
+    # consider controlling which ones to add to levels, rather than removing from parameters
 
     levels["parameters"] = parameters
     levels["dollar_value"] = dollar_position_size
