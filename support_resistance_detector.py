@@ -206,6 +206,9 @@ def level_detector():
 
     for coin in all_levels:
         entry = min(all_levels[coin], key=lambda x: abs(x - close[coin] * 1.005)) # 0.50% above close
+        for level in all_levels[coin]:
+            if level > entry:
+                all_levels[coin].remove(level)
         all_levels[coin].remove(entry)
 
         stop = min(all_levels[coin], key=lambda x: abs(x - entry * 0.995)) # 0.50% below entry
