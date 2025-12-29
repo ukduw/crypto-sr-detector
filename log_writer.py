@@ -15,5 +15,5 @@ def log_writer(dict):
         file.write(f" === {now} UTC === " + "\n")
         for key in dict["parameters"]:
             file.write(f"{key}: Entry {dict["parameters"][key][0]}, Stop {dict["parameters"][key][1]}" + "\n")
-
+        file.write("\n")
 
