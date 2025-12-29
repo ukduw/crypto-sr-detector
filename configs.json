@@ -1,0 +1,26 @@
+[
+  {
+    "symbol": "PEPE/USD",
+    "entry_price": 4.1e-06,
+    "stop_loss": 4.08e-06,
+    "dollar_value": 1000
+  },
+  {
+    "symbol": "DOT/USD",
+    "entry_price": 1.8509,
+    "stop_loss": 1.8413,
+    "dollar_value": 1000
+  },
+  {
+    "symbol": "LINK/USD",
+    "entry_price": 12.485,
+    "stop_loss": 12.4351,
+    "dollar_value": 1000
+  },
+  {
+    "symbol": "SOL/USD",
+    "entry_price": 124.199,
+    "stop_loss": 123.5875,
+    "dollar_value": 1000
+  }
+]
