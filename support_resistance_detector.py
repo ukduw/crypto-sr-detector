@@ -223,7 +223,7 @@ def level_detector():
 
     params_to_be_deleted = []
     for coin in levels["parameters"]:
-        if levels["parameters"][coin][1] / levels["parameters"][coin][0] * 100 > 0.8: # stop / entry * 100 > 0.80% (TWEAK)
+        if 100 - levels["parameters"][coin][1] / levels["parameters"][coin][0] * 100 > 0.8: # stop / entry * 100 > 0.80% (TWEAK)
             params_to_be_deleted.append(coin)
     
     for coin in params_to_be_deleted:
