@@ -17,7 +17,7 @@ def parameter_writer(dict):
         # (might be fine since it'll just result in no new config being written...)
         # (but then that would probably result in the trading script using old config...)
         # after fixing, trading script also needs to be updated to not run if config happens to be empty
-    for symbol in dict[0]:
+    for symbol in dict["parameters"]:
         configs.append({"symbol": symbol, "entry_price": dict[symbol][0], "stop_loss": dict[symbol][1], "dollar_value": dict['dollar_value']})
 
     with open(CONFIG_FILE, "w") as file:
