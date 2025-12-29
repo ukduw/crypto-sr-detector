@@ -217,9 +217,6 @@ def level_detector():
     
     print("PARAMETERS", parameters)
 
-    #for coin in parameters:
-    #    if parameters[coin][1] / parameters[coin][0] * 100 > 0.8: # stop / entry * 100 > 0.80% (TWEAK)
-    #        del parameters[coin]
     # consider controlling which ones to add to levels, rather than removing from parameters
         # or, iterate through levels and remove from levels instead
         # since it's easier to assign as below, rather than using setdefault or something...
