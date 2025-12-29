@@ -13,6 +13,10 @@ CONFIG_FILE = "configs.json" # placeholder - change to the config json in crypto
 def parameter_writer(dict):
     configs = []
 
+    # THERE IS RARE CASE WHERE ALL PARAMS WILL BE REMOVED, CAUSING THIS TO THROW ERROR:
+        # (might be fine since it'll just result in no new config being written...)
+        # (but then that would probably result in the trading script using old config...)
+        # after fixing, trading script also needs to be updated to not run if config happens to be empty
     for symbol in dict[0]:
         configs.append({"symbol": symbol, "entry_price": dict[symbol][0], "stop_loss": dict[symbol][1], "dollar_value": dict['dollar_value']})
 
