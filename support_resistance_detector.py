@@ -227,7 +227,7 @@ def level_detector():
             params_to_be_deleted.append(coin)
     
     for coin in params_to_be_deleted:
-        print(f"REMOVED: {levels["parameters"][coin]}")
+        print(f"REMOVED: {coin} {levels["parameters"][coin]}")
         del levels["parameters"][coin]
 
     print("LEVELS", levels)
