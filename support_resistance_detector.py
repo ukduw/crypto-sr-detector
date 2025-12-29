@@ -221,10 +221,10 @@ def level_detector():
     levels["parameters"] = parameters
     levels["dollar_value"] = dollar_position_size
 
-    for coin in levels.parameters:
-        if levels.parameters[coin][1] / levels.parameters[coin][0] * 100 > 0.8: # stop / entry * 100 > 0.80% (TWEAK)
-            print(f"REMOVED: {levels.parameters[coin]}")
-            del levels.parameters[coin]
+    for coin in levels["parameters"]:
+        if levels["parameters"][coin][1] / levels["parameters"][coin][0] * 100 > 0.8: # stop / entry * 100 > 0.80% (TWEAK)
+            print(f"REMOVED: {levels["parameters"][coin]}")
+            del levels["parameters"][coin]
 
     print("LEVELS", levels)
 
