@@ -217,9 +217,6 @@ def level_detector():
     
     print("PARAMETERS", parameters)
 
-    # consider controlling which ones to add to levels, rather than removing from parameters
-        # or, iterate through levels and remove from levels instead
-        # since it's easier to assign as below, rather than using setdefault or something...
 
     levels["parameters"] = parameters
     levels["dollar_value"] = dollar_position_size
