@@ -206,6 +206,9 @@ def level_detector():
 
     # === STRATEGY PARAMETERS === #
         # TWEAK THIS - needs more research...
+            # can the 0.50% conditions be dynamically assigned instead...?
+                # e.g. some function of stdev?
+            # since each coin has different range on different days...
     parameters = {}
 
     for coin in all_levels:
