@@ -108,8 +108,12 @@ def level_detector():
             z_score_highs = zscore(np_highs)
             z_score_lows = zscore(np_lows)
 
-            filtered_highs = np_highs[np.abs(z_score_highs) < 3] # > or < 3 zscore is standard; could increase
-            filtered_lows = np_lows[np.abs(z_score_lows) < 3]
+            filtered_highs = np_highs[np.abs(z_score_highs) < 5]
+            filtered_lows = np_lows[np.abs(z_score_lows) < 5]
+                # > or < 3 zscore is standard, but charts can be very volatile (valid, >3 stdevs from mean...)
+                # only want to filter out extreme outliers (i.e. order of magnitude greater than rest of data)
+                    # increasing zscore filter works for now
+                    # consider using more robust method, e.g. median absolute deviation (MAD)?
 
             highs[coin] = filtered_highs.tolist()
             lows[coin] = filtered_lows.tolist()
