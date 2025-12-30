@@ -133,8 +133,6 @@ def level_detector():
 
 
     # === S/R DETECT, MERGE LEVELS === #
-    # make stdev filter more granular, so more detailed levels are preserved before next step...
-        # test more, tweak stdev/x
     for coin in highs:
         resistance = []
         no_dupes = []
@@ -146,7 +144,7 @@ def level_detector():
                     if not no_dupes or no_dupes[-1] != lvl:
                         no_dupes.append(lvl)
                 if len(no_dupes) >= 3:
-                    peaks, _ = find_peaks(no_dupes) # returns 0, 1 or 2 indices
+                    peaks, _ = find_peaks(no_dupes)
                     
                     if len(peaks) > 0:
                         for i in peaks:
@@ -181,7 +179,7 @@ def level_detector():
                     if not no_dupes2 or no_dupes2[-1] != lvl2:
                         no_dupes2.append(lvl2)
                 if len(no_dupes2) >= 3:
-                    peaks2, _ = find_peaks(no_dupes2) # returns 0, 1 or 2 indices
+                    peaks2, _ = find_peaks(no_dupes2)
 
                     if len(peaks2) > 0:
                         for i in peaks2:
