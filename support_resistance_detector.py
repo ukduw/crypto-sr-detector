@@ -29,21 +29,6 @@ from scipy.stats import zscore
     # "mid" are less volatile/have less range, but DO NOT TRACK, so are actually more valuable
 
 
-# 1. determine level parameters (and take-profit conditions for bot script)
-# 2. test, tweak parameters, remove prints/plots/comments
-    # needs significant parameter tweaks in sr detector AND trading script
-    # trading script needs big changes to profit taking logic...
-
-# 3. write readme
-    # purpose/goal
-    # overview of how it works + tech stack
-    # explain how it links to trading script
-
-# 4. future: 
-    # dynamically categorize coins in list [] based on data from crypto API, e.g. using range? or some percentage-based derivative
-    # then, dynamically change their parameters in line with the technicals (better than broad categories)
-
-
 load_dotenv()
 API_KEY = os.getenv("API_KEY")
 SECRET_KEY = os.getenv("SECRET_KEY")
@@ -59,6 +44,21 @@ dollar_position_size = 1000
 universal = pytz.timezone("UTC")
 
 historical_client = CryptoHistoricalDataClient(api_key=API_KEY, secret_key=SECRET_KEY)
+
+
+# 1. determine level parameters (and take-profit conditions for bot script)
+# 2. test, tweak parameters, remove prints/plots/comments
+    # needs significant parameter tweaks in sr detector AND trading script
+    # trading script needs big changes to profit taking logic...
+
+# 3. write readme
+    # purpose/goal
+    # overview of how it works + tech stack
+    # explain how it links to trading script
+
+# 4. future: 
+    # dynamically categorize coins in list [] based on data from crypto API, e.g. using range? or some percentage-based derivative
+    # then, dynamically change their parameters in line with the technicals (better than broad categories)
 
 
 def level_detector():
