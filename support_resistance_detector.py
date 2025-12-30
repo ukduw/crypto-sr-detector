@@ -120,6 +120,8 @@ def level_detector():
 
         close[coin] = bars[-1].close
             # what if last bar's close is unreliable...? UGH
+                # may need to calculate zscore, check last close is not outlier
+                # if outlier, use bars[-2].close...
 
 
     # === STDEV === #
