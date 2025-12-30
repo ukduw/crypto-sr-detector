@@ -1,7 +1,6 @@
 import json
 
-CONFIG_FILE = "configs.json" # placeholder - change to the config json in crypto bot after testing
-    # ../crypto-hybrid-tradebot/crypto_config.json
+CONFIG_FILE = "../crypto-hybrid-tradebot/crypto_config.json"
 
 # dict:
     #{
