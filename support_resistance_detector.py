@@ -33,7 +33,11 @@ from scipy.stats import zscore
 # 2. test, tweak parameters, remove prints/plots/comments
     # needs significant parameter tweaks in sr detector AND trading script
     # trading script needs big changes to profit taking logic...
+
 # 3. write readme
+    # purpose/goal
+    # overview of how it works + tech stack
+    # explain how it links to trading script
 
 # 4. future: 
     # dynamically categorize coins in list [] based on data from crypto API, e.g. using range? or some percentage-based derivative
