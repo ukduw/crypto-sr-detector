@@ -13,9 +13,6 @@ from scipy.signal import find_peaks
 from scipy.stats import zscore
 
 
-# subscribe as currency pair, e.g. "BTCUSD"
-    # updated to "BTC/USD", but legacy version above is still backwards compatible...
-
 # full list: 25 [AAVE, AVAX, BAT, BCH, BTC, CRV, DOGE, DOT, ETH, GRT, LINK, LTC, MKR, PEPE, SHIB, SOL, SUSHI, TRUMP, UNI, USDC, USDG, USDT, XRP, XTZ, YFI]
 # tradeable: 18 [AAVE, AVAX, BCH, BTC, CRV, DOGE, DOT, ETH, GRT, LINK, LTC, PEPE, SHIB, SOL, UNI, XRP, XTZ, YFI]
     # high: 7 [PEPE, DOT, LINK, SOL, CRV, AAVE, GRT]
