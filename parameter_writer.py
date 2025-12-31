@@ -17,7 +17,7 @@ def parameter_writer(dict):
     with open(CONFIG_FILE, "w") as file:
         json.dump(configs, file, indent=2)
 
-    print("New configs saved to configs.json")
+    print("New configs saved to crypto_configs.json")
     for c in configs:
         print(f" - {c['symbol']}: Entry {c['entry_price']}, Stop {c['stop_loss']}, Qty ${c['dollar_value']}")
     print(f"Total symbols saved: {len(configs)}")
