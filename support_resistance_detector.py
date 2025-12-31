@@ -119,6 +119,7 @@ def level_detector():
             # what if last bar's close is unreliable...? UGH
                 # may need to calculate zscore, check last close is not outlier
                 # if outlier, use bars[-2].close...
+                # or, append filtered closes to new list, then assign newlist[-1] to close[coin]
 
 
     # === STDEV === #
